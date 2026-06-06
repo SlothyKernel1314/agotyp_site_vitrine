@@ -416,7 +416,7 @@ body {
   background: var(--dark);
   border-radius: var(--radius-xl);
   padding: 2.5rem 3rem;
-  width: 100 %;
+  width: 100%;
   margin-top: 2.5rem;
 }
 .about__card-title {
