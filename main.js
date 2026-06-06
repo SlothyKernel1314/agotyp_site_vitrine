@@ -235,8 +235,6 @@ function renderActivities() {
     const card = document.createElement('article');
     card.className   = 'activity-card reveal';
     card.style.transitionDelay = `${i * 0.08}s`;
-    card.setAttribute('aria-label', `Activité : ${act.name}`);
-    card.setAttribute('tabindex', '0');
 
     card.innerHTML = `
       <div class="activity-card__img" role="region" aria-label="Carrousel : ${act.name}">
