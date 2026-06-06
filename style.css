@@ -81,10 +81,6 @@ body {
 }
 
 /* Logo box */
-.logo {
-  position: fixed;
-}
-
 .sidebar-logo {
   position: fixed;
   top: 1.25rem;
@@ -108,7 +104,7 @@ body {
   box-shadow: 0 8px 30px rgba(0,0,0,0.18);
   outline: 3px solid var(--teal);
 }
-.sidebar-logo svg { width: 36px; height: 36px; }
+.sidebar-logo img { width: 36px; height: 36px; }
 
 /* Three coloured stripes */
 .sidebar-strip {
