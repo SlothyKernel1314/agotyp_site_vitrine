@@ -11,3 +11,6 @@ desktop.ini
 
 # Logs
 *.log
+
+# Documents de travail locaux (non versionnés)
+TODO.md
