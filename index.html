@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorem Ipsum — Groupe d'Entraide Mutuelle</title>
+  <meta name="description" content="Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçut par des autistes pour des autistes." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Google Fonts — Lexend -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Skip to content — Accessibility -->
+  <a class="skip-link" href="#accueil">Aller au contenu principal</a>
+
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- ================================================
+       SIDEBAR NAVIGATION
+  ================================================ -->
+  <nav class="sidebar-nav" aria-label="Navigation principale">
+
+    <!-- Logo -->
+    <a class="sidebar-logo" href="#accueil" aria-label="Lorem Ipsum — Accueil">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <img class="logo" src="AGORA_LOGO_RGB.svg" alt="Logo Lorem Ipsum" width="40" height="40" />
+        <rect width="40" height="40" rx="10" fill="white"/>
+      </svg>
+    </a>
+
+    <!-- Strip 1 : Mauve — À Propos -->
+    <div class="sidebar-strip sidebar-strip--mauve">
+      <a class="sidebar-link" href="#a-propos" aria-label="Section 1 — À Propos">
+        [1] À PROPOS
+      </a>
+    </div>
+
+    <!-- Strip 2 : Orange — Nos Activités -->
+    <div class="sidebar-strip sidebar-strip--orange">
+      <a class="sidebar-link" href="#nos-activites" aria-label="Section 2 — Nos Activités">
+        [2] NOS ACTIVITÉS
+      </a>
+    </div>
+
+    <!-- Strip 3 : DarkTeal — FAQ -->
+    <div class="sidebar-strip sidebar-strip--darkestteal">
+      <a class="sidebar-link" href="#faq" aria-label="Section 3 — FAQ">
+        [3] FAQ
+      </a>
+    </div>
+
+    <!-- Strip 4 : DarkTeal — Documentation -->
+    <div class="sidebar-strip sidebar-strip--darkteal">
+      <a class="sidebar-link" href="#documentation" aria-label="Section 4 — Documentation">
+        [4] DOCUMENTATION
+      </a>
+    </div>
+
+    <!-- Strip 5 : Teal — Contact -->
+    <div class="sidebar-strip sidebar-strip--teal">
+      <a class="sidebar-link" href="#contact" aria-label="Section 5 — Contact">
+        [5] CONTACT
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- ================================================
+       MAIN CONTENT
+  ================================================ -->
+  <main id="main-content">
+ 
+    <!-- HERO -->
+    <section id="accueil" class="section hero-section" aria-labelledby="hero-title">
+ 
+      <!-- Mascotte positionnée en absolu sur la section, derrière la sidebar -->
+      <div class="hero__mascot-wrap" aria-hidden="true">
+        <div class="hero__mascot-bg"></div>
+        <img src="images/Mascotte_bonjour.png" alt="Mascotte — mascotte Lorem Ipsum en saluer d'une main" class="hero__mascot-img" />
+      </div>
+ 
+      <div class="section__inner">
+        <div class="hero__left">
+          <p class="hero__eyebrow">Groupe d'Entraide Mutuelle</p>
+          <h1 class="hero__title" id="hero-title">Lorem Ipsum</h1>
+          <p class="hero__subtitle">Groupe d'Entraide Mutuelle</p>
+          <div class="hero__desc">
+            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+            <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités.</p>
+          </div>
+          <a href="#contact" class="btn-primary">
+            Planifier une visite
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+ 
+    <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+    <!-- À PROPOS -->
+    <section id="a-propos" class="section" aria-labelledby="about-title">
+      <div class="section__inner">
+
+        <div class="reveal">
+          <h2 class="about__title" id="about-title">Le GEM</h2>
+          <p class="about__subtitle"><em>[Qui sommes nous ?]</em></p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text-block reveal reveal-delay-1">
+            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+            <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités. </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <img src="images/Mascotte_joueur.png" alt="Mascotte — mascotte Lorem Ipsum en train de jouer" class="mascot-img mascot-img--about" />
+          </div>
+        </div>
+
+        <div class="about__card reveal reveal-delay-3">
+          <p class="about__card-title">Nous sommes plus qu'un dispositif.</p>
+          <p class="about__card-text">
+            Lorem Ipsum est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+    <!-- NOS ACTIVITÉS -->
+    <section id="nos-activites" class="section" aria-labelledby="activities-title">
+      <div class="section__inner">
+
+        <div class="reveal">
+          <h2 class="activities__title" id="activities-title">Ce qu'on fait</h2>
+          <p class="activities__subtitle"><em>[Nos activités]</em></p>
+        </div>
+
+        <!-- Cards injected by main.js -->
+        <div class="activities__grid" id="activitiesGrid"></div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="section__inner">
+
+        <div class="faq__layout">
+
+          <!-- Colonne gauche : titre + questions -->
+          <div class="faq__content">
+
+            <div class="reveal">
+              <h2 class="faq__title" id="faq-title">Des questions&nbsp;?</h2>
+              <p class="faq__subtitle"><em>[Foire aux questions]</em></p>
+            </div>
+
+            <!-- Items injected by main.js -->
+            <div class="faq__list reveal reveal-delay-1" id="faqList" role="list"></div>
+
+          </div>
+
+          <!-- Colonne droite : mascotte libraire -->
+          <!--div class="faq__mascot-wrap reveal reveal-delay-2" aria-hidden="true">
+            <img src="images/Mascotte_libraire.png" alt="Mascotte — mascotte Lorem Ipsum libraire avec des livres" class="faq__mascot" />
+          </!--div-->
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+    <!-- DOCUMENTATION -->
+    <section id="documentation" class="section" aria-labelledby="docs-title">
+      <div class="section__inner">
+
+        <div class="reveal">
+          <h2 class="docs__title" id="docs-title">Documents</h2>
+          <p class="docs__subtitle"><em>[Documentation]</em></p>
+        </div>
+
+        <!-- Grid of documents from main.js -->
+        <div class="docs__layout reveal reveal-delay-1" id="docsLayout"></div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="section__inner">
+        <div class="contact__inner">
+
+          <!--Left Column — text -->
+          <div class="contact__left">
+
+            <p class="contact__label reveal">Nous rejoindre</p>
+            <h2 class="contact__title reveal reveal-delay-1" id="contact-title">
+              Venez nous rendre visite&nbsp;!
+            </h2>
+            <p class="contact__desc reveal reveal-delay-2">
+              Que vous soyez curieux, à la recherche de lien social ou simplement envie de découvrir l'espace, nos portes vous sont ouvertes.
+            </p>
+
+            <div class="contact__actions reveal reveal-delay-3">
+              <a href="mailto:loremipsume@gmail.com" class="btn-teal" aria-label="Envoyer un email à Lorem Ipsum">
+                Nous écrire
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M1 5L8 9.5L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a href="tel:+xxxxxxxxx" title="Appeler l'animatrice" class="btn-outline" aria-label="Appeler Lorem Ipsum">
+                Nous appeler
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 2h3l1.5 4L6 7.5c1 2 2.5 3.5 4.5 4.5L12 10.5l4 1.5V15a1 1 0 01-1 1C5.4 16 0 10.6 0 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact__details reveal reveal-delay-4">
+              <div class="contact__detail">
+                <p class="contact__detail-label">Adresse</p>
+                <p class="contact__detail-value">Lorem Ipsum, 90000 Lorem</p>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__detail-label">Horaires</p>
+                <p class="contact__detail-value">Lun – Sam<br>10h–18h</p>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__detail-label">Email</p>
+                <p class="contact__detail-value">xloremipsum@gmail.com</p>
+              </div>
+            </div>
+
+          </div><!-- /.contact__left -->
+
+          <!-- Right Column — Mascot -->
+          <div class="contact__right">
+            <img src="images/Contact_Mascotte.png" alt="Mascotte — mascotte Lorem Ipsum tenant une enveloppe" class="contact__mascot reveal reveal-delay-1" />
+          </div>
+
+        </div><!-- /.contact__inner -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer>
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Loremipsum — Groupe d'Entraide Mutuelle. Tous droits réservés. Fait par Pxelgon.</p>
+      <nav class="footer__links" aria-label="Liens de bas de page">
+        <a href="#accueil">Accueil</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#nos-activites">Activités</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+<!-- ================================================
+       MOBILE BOTTOM NAVIGATION (≤ 768px)
+  ================================================ -->
+  <nav class="mobile-nav" aria-label="Navigation mobile">
+    <ul class="mobile-nav__list">
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#accueil" aria-label="Accueil">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          Accueil
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#a-propos" aria-label="À propos">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <line x1="12" y1="8" x2="12" y2="8.5" stroke-width="2.5"/>
+            <line x1="12" y1="11" x2="12" y2="16"/>
+          </svg>
+          À propos
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#nos-activites" aria-label="Nos activités">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Activités
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#faq" aria-label="FAQ">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M9.5 9.5a2.5 2.5 0 015 .5c0 1.5-1.5 2-2.5 2.5V14"/>
+            <circle cx="12" cy="17" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+          FAQ
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#documentation" aria-label="Documentation">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+          Docs
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a class="mobile-nav__link" href="#contact" aria-label="Contact">
+          <svg class="mobile-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+          Contact
+          <span class="mobile-nav__dot"></span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+  
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
