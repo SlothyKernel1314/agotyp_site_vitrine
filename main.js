@@ -312,7 +312,7 @@ function renderFAQ() {
            id="${answerId}"
            role="region"
            aria-labelledby="${btnId}">
-        ${item.a}
+        <div class="faq__answer-inner">${item.a}</div>
       </div>
     `;
 
