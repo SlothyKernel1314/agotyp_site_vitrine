@@ -1039,7 +1039,7 @@ body {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
   margin-bottom: 0.4rem;
 }
 .contact__detail-value {
@@ -1099,7 +1099,7 @@ footer {
 }
 .footer__copy {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
 }
 .footer__links {
   display: flex;
@@ -1107,7 +1107,7 @@ footer {
 }
 .footer__links a {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
   transition: color 0.2s;
 }
