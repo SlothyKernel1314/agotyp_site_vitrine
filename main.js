@@ -210,8 +210,8 @@ function createCarousel(card, images) {
 
   // --- Keyboard navigation ---
   card.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
-    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(currentIndex - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex + 1); }
   });
 
   // Reset counter
