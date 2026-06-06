@@ -828,14 +828,7 @@ body {
   stroke: currentColor;
 }
 
-/* Grille de cartes documents */
-.docs__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-/* ── Carrousel rapports d'activité ── */
+/* ── Carrousel de documents ── */
 .docs-carousel {
   display: flex;
   align-items: center;
@@ -1291,7 +1284,6 @@ footer {
 
   /* Documentation */
   .docs__title  { font-size: clamp(2rem, 8vw, 3.5rem); }
-  .docs__grid   { grid-template-columns: 1fr; }
   .doc-card     { grid-template-columns: 44px 1fr auto; padding: 1rem 1.25rem; }
   .doc-card__icon { width: 44px; height: 44px; }
 

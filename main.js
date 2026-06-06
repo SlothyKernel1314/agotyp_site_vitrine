@@ -429,39 +429,52 @@ function initKeyboardHelpers() {
 /* ============================================================
    DATA — Documentation
 ============================================================ */
-const docs = {
-  reglements: [
-    {
-      title: 'Règlement intérieur',
-      desc:  'Règles de vie et de fonctionnement du GEM Loremipsum.',
-      file:  'docs/reglement_interieur.pdf',
-      icon:  'rules',
-    },
-  ],
-  rapports: [
-    {
-      year:  2025,
-      title: "Rapport d'activité 2025",
-      desc:  'Bilan complet année 2025 : activités, membres, projets.',
-      file:  'docs/rapport_activite_2025.pdf',
-      icon:  'report',
-    },
-    {
-      year:  2024,
-      title: "Rapport d'activité 2024",
-      desc:  'Bilan complet année 2024 : activités, membres, projets.',
-      file:  'docs/rapport_activite_2024.pdf',
-      icon:  'report',
-    },
-    {
-      year:  2023,
-      title: "Rapport d'activité 2023",
-      desc:  'Bilan complet année 2023 : activités, membres, projets.',
-      file:  'docs/rapport_activite_2023.pdf',
-      icon:  'report',
-    },
-  ],
-};
+/* Sections de documentation (ordre d'affichage = ordre du tableau).
+   Chaque section est rendue en carrousel. */
+const docSections = [
+  {
+    id:    'cadre-associatif',
+    title: 'Cadre associatif',
+    items: [
+      {
+        title: 'Statuts',
+        desc:  "Statuts de l'association Agoratypique.",
+        file:  'docs/agotyp_statuts_v.3.0.pdf',
+        icon:  'rules',
+      },
+      {
+        title: 'Règlement intérieur',
+        desc:  'Règles de vie et de fonctionnement du GEM.',
+        file:  'docs/agotyp_reglement_interieur_v.3.0.pdf',
+        icon:  'rules',
+      },
+    ],
+  },
+  {
+    id:    'rapports',
+    title: "Rapports d'activité",
+    items: [
+      {
+        title: "Rapport d'activité 2024",
+        desc:  "Bilan de l'année 2024 : activités, membres, projets.",
+        file:  'docs/agotyp_rapport_activite_2024.pdf',
+        icon:  'report',
+      },
+    ],
+  },
+  {
+    id:    'cadre-legislatif',
+    title: 'Cadre législatif',
+    items: [
+      {
+        title: 'Cahier des charges',
+        desc:  'Cahier des charges du GEM.',
+        file:  'docs/cahier_des_charges_gem.pdf',
+        icon:  'rules',
+      },
+    ],
+  },
+];
 
 /* ============================================================
    SVG ICONS — Documents
@@ -491,132 +504,127 @@ const docIcons = {
    RENDER — Documentation
 ============================================================ */
 
-/* Nombre de cartes visibles à la fois dans le carrousel rapports */
-const RAPPORTS_VISIBLE = 2;
+/* Nombre de cartes visibles à la fois dans un carrousel de documents */
+const DOCS_VISIBLE = 2;
+
+/* Icônes de titre par section */
+const docSectionIcons = {
+  'cadre-associatif': `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M4 3h9l4 4v11a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"
+            stroke="currentColor" stroke-width="1.6"/>
+      <path d="M13 3v5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>`,
+  'rapports': `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M5 10l3 3 7-6" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+  'cadre-legislatif': `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M10 5C8.5 3.8 6.5 3.4 4 4v11c2.5-.6 4.5-.2 6 1 1.5-1.2 3.5-1.6 6-1V4c-2.5-.6-4.5-.2-6 1z"
+            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M10 5v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+};
 
 function renderDocs() {
   const container = document.getElementById('docsLayout');
   if (!container) return;
 
-  // ─── Règlement ───────────────────────────────────────────
-  const secReglements = document.createElement('div');
-  secReglements.className = 'docs__section reveal reveal-delay-1';
-  secReglements.innerHTML = `<h3 class="docs__section-title">
-    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d="M4 3h9l4 4v11a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"
-            stroke="currentColor" stroke-width="1.6"/>
-      <path d="M13 3v5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-    Règlement
-  </h3>`;
+  docSections.forEach((section, i) => {
+    const sec = document.createElement('div');
+    sec.className = `docs__section reveal reveal-delay-${i + 1}`;
 
-  const regGrid = document.createElement('div');
-  regGrid.className = 'docs__grid';
-  docs.reglements.forEach(doc => regGrid.appendChild(makeDocCard(doc)));
-  secReglements.appendChild(regGrid);
-  container.appendChild(secReglements);
+    const heading = document.createElement('h3');
+    heading.className = 'docs__section-title';
+    heading.innerHTML = `${docSectionIcons[section.id] || ''} ${section.title}`;
+    sec.appendChild(heading);
 
-  // ─── Rapports d'activité ──────────────────────────────────
-  const secRapports = document.createElement('div');
-  secRapports.className = 'docs__section reveal reveal-delay-2';
-  secRapports.innerHTML = `<h3 class="docs__section-title">
-    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
-      <path d="M5 10l3 3 7-6" stroke="currentColor" stroke-width="1.6"
-            stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Rapports d'activité
-  </h3>`;
+    sec.appendChild(createDocsCarousel(section.items));
+    container.appendChild(sec);
+  });
+}
 
-  const sorted = [...docs.rapports].sort((a, b) => b.year - a.year);
-  const needsCarousel = sorted.length > RAPPORTS_VISIBLE;
+/* ── Construit un carrousel de cartes documents (s'adapte au nb d'éléments) ── */
+function createDocsCarousel(items) {
+  const total    = items.length;
+  const visible  = Math.min(DOCS_VISIBLE, total);
+  const maxIndex = Math.max(0, total - visible);
 
-  if (!needsCarousel) {
-    // Pas assez de rapports → simple grille, pas de carrousel
-    const grid = document.createElement('div');
-    grid.className = 'docs__grid';
-    sorted.forEach(doc => grid.appendChild(makeDocCard(doc)));
-    secRapports.appendChild(grid);
-  } else {
-    // Carrousel
-    const wrap = document.createElement('div');
-    wrap.className = 'docs-carousel';
+  const wrap = document.createElement('div');
+  wrap.className = 'docs-carousel';
 
-    // Bouton précédent
-    const btnPrev = document.createElement('button');
-    btnPrev.className = 'docs-carousel__btn docs-carousel__btn--prev';
-    btnPrev.setAttribute('aria-label', 'Rapport précédent');
-    btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  // Bouton précédent
+  const btnPrev = document.createElement('button');
+  btnPrev.className = 'docs-carousel__btn docs-carousel__btn--prev';
+  btnPrev.type = 'button';
+  btnPrev.setAttribute('aria-label', 'Document précédent');
+  btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`;
 
-    // Viewport + track
-    const viewport = document.createElement('div');
-    viewport.className = 'docs-carousel__viewport';
+  // Viewport + track
+  const viewport = document.createElement('div');
+  viewport.className = 'docs-carousel__viewport';
 
-    const track = document.createElement('div');
-    track.className = 'docs-carousel__track';
+  const track = document.createElement('div');
+  track.className = 'docs-carousel__track';
 
-    sorted.forEach(doc => {
-      const item = document.createElement('div');
-      item.className = 'docs-carousel__item';
-      item.appendChild(makeDocCard(doc));
-      track.appendChild(item);
-    });
+  items.forEach(doc => {
+    const item = document.createElement('div');
+    item.className = 'docs-carousel__item';
+    // largeur d'une carte = (100% - gaps) / nb visibles
+    item.style.flex = `0 0 calc((100% - ${(visible - 1)}rem) / ${visible})`;
+    item.appendChild(makeDocCard(doc));
+    track.appendChild(item);
+  });
 
-    viewport.appendChild(track);
+  viewport.appendChild(track);
 
-    // Bouton suivant
-    const btnNext = document.createElement('button');
-    btnNext.className = 'docs-carousel__btn docs-carousel__btn--next';
-    btnNext.setAttribute('aria-label', 'Rapport suivant');
-    btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  // Bouton suivant
+  const btnNext = document.createElement('button');
+  btnNext.className = 'docs-carousel__btn docs-carousel__btn--next';
+  btnNext.type = 'button';
+  btnNext.setAttribute('aria-label', 'Document suivant');
+  btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`;
 
-    wrap.appendChild(btnPrev);
-    wrap.appendChild(viewport);
-    wrap.appendChild(btnNext);
-    secRapports.appendChild(wrap);
+  wrap.appendChild(btnPrev);
+  wrap.appendChild(viewport);
+  wrap.appendChild(btnNext);
 
-    // ── Logique carrousel ──────────────────────────────────
-    let currentIndex = 0;
-    const total = sorted.length;
-    const maxIndex = total - RAPPORTS_VISIBLE;
+  // ── Logique carrousel ──
+  let currentIndex = 0;
 
-    function updateCarousel() {
-      const pct = (100 / RAPPORTS_VISIBLE) * currentIndex;
-      track.style.transform = `translateX(-${pct}%)`;
-
-      // Masquer/afficher les boutons aux extrémités
-      btnPrev.classList.toggle('docs-carousel__btn--hidden', currentIndex === 0);
-      btnNext.classList.toggle('docs-carousel__btn--hidden', currentIndex >= maxIndex);
-    }
-
-    btnPrev.addEventListener('click', () => {
-      if (currentIndex > 0) { currentIndex--; updateCarousel(); }
-    });
-    btnNext.addEventListener('click', () => {
-      if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-    });
-
-    // Swipe tactile
-    let touchStartX = 0;
-    viewport.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    viewport.addEventListener('touchend', e => {
-      const delta = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(delta) > 40) {
-        if (delta > 0 && currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-        if (delta < 0 && currentIndex > 0)        { currentIndex--; updateCarousel(); }
-      }
-    });
-
-    updateCarousel(); // état initial
+  function updateCarousel() {
+    const pct = (100 / visible) * currentIndex;
+    track.style.transform = `translateX(-${pct}%)`;
+    btnPrev.classList.toggle('docs-carousel__btn--hidden', currentIndex === 0);
+    btnNext.classList.toggle('docs-carousel__btn--hidden', currentIndex >= maxIndex);
   }
 
-  container.appendChild(secRapports);
+  btnPrev.addEventListener('click', () => {
+    if (currentIndex > 0) { currentIndex--; updateCarousel(); }
+  });
+  btnNext.addEventListener('click', () => {
+    if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
+  });
+
+  // Swipe tactile
+  let touchStartX = 0;
+  viewport.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', e => {
+    const delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) {
+      if (delta > 0 && currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
+      if (delta < 0 && currentIndex > 0)        { currentIndex--; updateCarousel(); }
+    }
+  });
+
+  updateCarousel(); // état initial
+  return wrap;
 }
 
 /* ── Fabrique une carte document ── */

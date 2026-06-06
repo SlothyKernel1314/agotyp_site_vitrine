@@ -9,8 +9,14 @@ desktop.ini
 *.swp
 *~
 
+# Configuration locale Claude Code (jamais versionnée)
+.claude/
+
 # Logs
 *.log
 
 # Documents de travail locaux (non versionnés)
 TODO.md
+
+# Documents PDF de l'association (non versionnés)
+docs/
