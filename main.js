@@ -369,38 +369,17 @@ function initProgressBar() {
 }
 
 /* ============================================================
-   ACTIVE SIDEBAR LINK
+   ACTIVE NAV LINK — sidebar (desktop) + nav mobile
 ============================================================ */
-function initActiveSidebarLink() {
-  const sections     = document.querySelectorAll('section[id]');
-  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+function initActiveNavLinks() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar-link, .mobile-nav__link');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        sidebarLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
-      }
-    });
-  }, { threshold: 0.4 });
-
-  sections.forEach(s => observer.observe(s));
-}
-
-/* ============================================================
-   ACTIVE MOBILE NAV LINK
-============================================================ */
-function initActiveMobileNavLink() {
-  const sections    = document.querySelectorAll('section[id]');
-  const mobileLinks = document.querySelectorAll('.mobile-nav__link');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        mobileLinks.forEach(link => {
+        navLinks.forEach(link => {
           link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
       }
@@ -662,7 +641,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderDocs();
   initScrollReveal();
   initProgressBar();
-  initActiveSidebarLink();
-  initActiveMobileNavLink();
+  initActiveNavLinks();
   initKeyboardHelpers();
 });
