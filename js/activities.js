@@ -3,7 +3,7 @@ import { createCarousel } from './carousel.js';
 import { activities } from './data.js';
 
 /* ============================================================
-   RENDER — Activity Cards avec carrousel
+   RENDER — Activity cards with carousel
 ============================================================ */
 export function renderActivities() {
   const grid = document.getElementById('activitiesGrid');
@@ -17,18 +17,18 @@ export function renderActivities() {
     card.innerHTML = `
       <div class="activity-card__img" role="region" aria-label="Carrousel : ${esc(act.name)}">
 
-        <!-- Label de catégorie -->
+        <!-- Category label -->
         <span class="activity-card__label" aria-hidden="true">${esc(act.label)}</span>
 
-        <!-- Compteur -->
+        <!-- Counter -->
         <span class="carousel__counter" aria-live="polite" aria-atomic="true"></span>
 
-        <!-- Track des slides -->
+        <!-- Slides track -->
         <div class="carousel__track-wrap">
           <div class="carousel__track"></div>
         </div>
 
-        <!-- Boutons navigation -->
+        <!-- Navigation buttons -->
         <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Image précédente">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -42,7 +42,7 @@ export function renderActivities() {
           </svg>
         </button>
 
-        <!-- Points de pagination -->
+        <!-- Pagination dots -->
         <div class="carousel__dots" role="group" aria-label="Sélectionner une image"></div>
 
       </div>
@@ -55,7 +55,7 @@ export function renderActivities() {
 
     grid.appendChild(card);
 
-    // Initialiser le carrousel pour cette carte
+    // Initialize the carousel for this card
     createCarousel(card, act.images);
   });
 }

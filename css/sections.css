@@ -12,10 +12,10 @@
   min-height: 100vh;
 }
  
-/* Conteneur absolu de la mascotte — s'étend jusqu'au bord droit (sidebar incluse) */
+/* Absolute mascot container — extends to the right edge (sidebar included) */
 .hero__mascot-wrap {
   position: absolute;
-  right: 0;                /* bord droit = derrière la sidebar */
+  right: 0;                /* right edge = behind the sidebar */
   bottom: 0;
   width: 55vw;
   max-width: 820px;
@@ -27,7 +27,7 @@
   justify-content: center;
 }
  
-/* Image mascotte — taille réelle 2048×2048 mais contrainte par le conteneur */
+/* Mascot image — actual size 2048×2048 but constrained by the container */
 .hero__mascot-img {
   position: relative;
   z-index: 1;
@@ -39,7 +39,7 @@
   display: block;
 }
  
-/* Texte hero à gauche — reste dans le flux normal, ignorant la mascotte */
+/* Hero text on the left — stays in normal flow, ignoring the mascot */
 .hero__left {
   position: relative;
   z-index: 2;
@@ -91,7 +91,7 @@
 .hero__desc p + p { margin-top: 0.75rem; }
  
 /* ============================================================
-   À PROPOS SECTION
+   ABOUT SECTION
 ============================================================ */
 #a-propos { background: var(--cream); }
 
@@ -142,7 +142,7 @@
 }
 
 /* ============================================================
-   ACTIVITÉS SECTION
+   ACTIVITIES SECTION
 ============================================================ */
 #nos-activites { background: var(--cream); }
 
@@ -171,7 +171,7 @@
 ============================================================ */
 #faq { background: var(--cream); }
 
-/* Layout deux colonnes : questions | mascotte */
+/* Two-column layout: questions | mascot */
 .faq__layout {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -180,15 +180,15 @@
 }
 
 .faq__content {
-  min-width: 0; /* évite le débordement dans la grille */
+  min-width: 0; /* avoids overflow in the grid */
 }
 
-/* Mascotte libraire à droite */
+/* Librarian mascot on the right */
 .faq__mascot-wrap {
   display: flex;
   align-items: flex-end;
   position: sticky;
-  top: 6rem;           /* reste visible au scroll */
+  top: 6rem;           /* stays visible on scroll */
   align-self: start;
 }
 
@@ -247,7 +247,7 @@
 }
 .docs__subtitle em { font-style: normal; font-weight: 600; color: var(--dark); }
 
-/* Conteneur principal : deux colonnes (règlement | rapports) */
+/* Main container: two columns (rules | reports) */
 .docs__layout {
   display: flex;
   flex-direction: column;
@@ -282,7 +282,7 @@
   overflow: hidden;
 }
 
-/* Grille deux colonnes : texte | mascotte */
+/* Two-column grid: text | mascot */
 .contact__inner {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -290,7 +290,7 @@
   gap: 0 2rem;
 }
 
-/* Colonne gauche */
+/* Left column */
 .contact__left {
   display: flex;
   flex-direction: column;
@@ -352,7 +352,7 @@
 }
 .contact__detail-value a:hover { text-decoration: underline; }
 
-/* Colonne droite — mascotte */
+/* Right column — mascot */
 .contact__right {
   display: flex;
   align-items: flex-end;

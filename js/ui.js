@@ -32,7 +32,7 @@ export function initProgressBar() {
 }
 
 /* ============================================================
-   ACTIVE NAV LINK — sidebar (desktop) + nav mobile
+   ACTIVE NAV LINK — sidebar (desktop) + mobile nav
 ============================================================ */
 export function initActiveNavLinks() {
   const sections = document.querySelectorAll('section[id]');

@@ -29,10 +29,10 @@ const docIcons = {
    RENDER — Documentation
 ============================================================ */
 
-/* Nombre de cartes visibles à la fois dans un carrousel de documents */
+/* Number of cards visible at once in a document carousel */
 const DOCS_VISIBLE = 2;
 
-/* Icônes de titre par section */
+/* Section title icons */
 const docSectionIcons = {
   'cadre-associatif': `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
       <path d="M4 3h9l4 4v11a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"
@@ -69,7 +69,7 @@ export function renderDocs() {
   });
 }
 
-/* ── Construit un carrousel de cartes documents (s'adapte au nb d'éléments) ── */
+/* ── Builds a document card carousel (adapts to the item count) ── */
 function createDocsCarousel(items) {
   const total    = items.length;
   const visible  = Math.min(DOCS_VISIBLE, total);
@@ -78,7 +78,7 @@ function createDocsCarousel(items) {
   const wrap = document.createElement('div');
   wrap.className = 'docs-carousel';
 
-  // Bouton précédent
+  // Previous button
   const btnPrev = document.createElement('button');
   btnPrev.className = 'docs-carousel__btn docs-carousel__btn--prev';
   btnPrev.type = 'button';
@@ -98,7 +98,7 @@ function createDocsCarousel(items) {
   items.forEach(doc => {
     const item = document.createElement('div');
     item.className = 'docs-carousel__item';
-    // largeur d'une carte = (100% - gaps) / nb visibles
+    // card width = (100% - gaps) / visible count
     item.style.flex = `0 0 calc((100% - ${(visible - 1)}rem) / ${visible})`;
     item.appendChild(makeDocCard(doc));
     track.appendChild(item);
@@ -106,7 +106,7 @@ function createDocsCarousel(items) {
 
   viewport.appendChild(track);
 
-  // Bouton suivant
+  // Next button
   const btnNext = document.createElement('button');
   btnNext.className = 'docs-carousel__btn docs-carousel__btn--next';
   btnNext.type = 'button';
@@ -120,7 +120,7 @@ function createDocsCarousel(items) {
   wrap.appendChild(viewport);
   wrap.appendChild(btnNext);
 
-  // ── Logique carrousel ──
+  // ── Carousel logic ──
   let currentIndex = 0;
 
   function updateCarousel() {
@@ -137,7 +137,7 @@ function createDocsCarousel(items) {
     if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
   });
 
-  // Swipe tactile
+  // Touch swipe
   let touchStartX = 0;
   viewport.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   viewport.addEventListener('touchend', e => {
@@ -148,11 +148,11 @@ function createDocsCarousel(items) {
     }
   });
 
-  updateCarousel(); // état initial
+  updateCarousel(); // initial state
   return wrap;
 }
 
-/* ── Fabrique une carte document ── */
+/* ── Builds a document card ── */
 function makeDocCard(doc) {
   const card = document.createElement('a');
   card.className   = 'doc-card';

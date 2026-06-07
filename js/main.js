@@ -1,7 +1,7 @@
 /* ============================================================
-   MAIN — point d'entrée (module ES)
-   Lit window.SITE_CONFIG/SITE_CONTENT (définis par les scripts
-   config/content chargés avant) et orchestre le rendu.
+   MAIN — entry point (ES module)
+   Reads window.SITE_CONFIG/SITE_CONTENT (set by the config/content
+   scripts loaded before) and orchestrates rendering.
 ============================================================ */
 import { renderActivities } from './activities.js';
 import { renderFAQ } from './faq.js';

@@ -1,5 +1,5 @@
 /* ============================================================
-   RESPONSIVE — Tablette large (≤ 1024px)
+   RESPONSIVE — Large tablet (≤ 1024px)
 ============================================================ */
 @media (max-width: 1024px) {
   .section { padding-right: calc(var(--sidebar-w) * 3 + 0.5rem); }
@@ -9,17 +9,17 @@
 }
 
 /* ============================================================
-   RESPONSIVE — Tablette portrait (≤ 768px)
+   RESPONSIVE — Portrait tablet (≤ 768px)
 ============================================================ */
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
 
-  /* Masquer la sidebar, afficher la nav bas */
+  /* Hide the sidebar, show the bottom nav */
   .sidebar-nav { display: none; }
   .mobile-nav  { display: block; }
   body         { padding-bottom: 72px; }
 
-  /* Sections pleine largeur */
+  /* Full-width sections */
   .section {
     min-height: auto;
     padding: 4rem 0 3rem;
@@ -34,19 +34,19 @@
   .hero__subtitle { font-size: clamp(1.1rem, 4vw, 1.6rem); }
   .hero__desc     { font-size: 0.9rem; }
 
-  /* À propos */
+  /* About */
   .about__grid  { grid-template-columns: 1fr; gap: 1.5rem; }
   .about__title { font-size: clamp(1.8rem, 7vw, 3rem); }
   .about__card  { padding: 1.75rem 1.5rem; }
 
-  /* Activités */
+  /* Activities */
   .activities__grid  { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .activities__title { font-size: clamp(2rem, 8vw, 3.5rem); }
 
   /* FAQ */
   .faq__title { font-size: clamp(2rem, 9vw, 4rem); }
   .faq__list  { max-width: 100%; }
-  /* Mascottes FAQ et About : passage en colonne sur tablette */
+  /* FAQ and About mascots: stack to a column on tablet */
   .faq__layout       { grid-template-columns: 1fr; }
   .faq__mascot-wrap  { position: static; justify-content: center; margin-top: 2rem; }
   .faq__mascot       { width: clamp(140px, 45vw, 220px); }
@@ -83,11 +83,11 @@
   .hero__desc     { font-size: 0.87rem; max-width: 100%; }
   .btn-primary    { font-size: 0.88rem; padding: 0.85rem 1.4rem; }
 
-  /* Activités : 1 colonne */
+  /* Activities: 1 column */
   .activities__grid  { grid-template-columns: 1fr; }
   .activities__title { font-size: clamp(1.8rem, 10vw, 2.5rem); }
 
-  /* À propos */
+  /* About */
   .about__title     { font-size: clamp(1.6rem, 9vw, 2.5rem); }
   .about__card      { padding: 1.5rem 1.25rem; border-radius: var(--radius-lg); }
   .about__card-title{ font-size: 1rem; }
@@ -104,7 +104,7 @@
   .doc-card           { grid-template-columns: 36px 1fr auto; gap: 0.75rem; padding: 0.9rem 1rem; }
   .doc-card__icon     { width: 36px; height: 36px; }
   .doc-card__title    { font-size: 0.88rem; }
-  .doc-card__desc     { display: none; }   /* masqué sur très petit écran */
+  .doc-card__desc     { display: none; }   /* hidden on very small screens */
   .doc-card__badge    { font-size: 0.55rem; }
 
   /* Contact */
@@ -119,7 +119,7 @@
 }
 
 /* ============================================================
-   RESPONSIVE — Très petit mobile (≤ 360px)
+   RESPONSIVE — Very small mobile (≤ 360px)
 ============================================================ */
 @media (max-width: 360px) {
   .section__inner    { padding: 0 1rem; }

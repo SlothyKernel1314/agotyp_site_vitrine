@@ -1,19 +1,19 @@
 /* ============================================================
-   CONTENU D'EXEMPLE (placeholders) — commité.
+   EXAMPLE CONTENT (placeholders) — committed.
    ------------------------------------------------------------
-   Documente la structure et sert de repli si content.js
-   (réel, gitignoré) est absent.
+   Documents the structure and serves as a fallback if content.js
+   (real, gitignored) is absent.
 
-   Pour le vrai contenu :
+   For the real content:
      cp content.example.js content.js
-   puis remplir content.js — qui écrase ces valeurs et n'est PAS commité.
+   then fill content.js — it overrides these values and is NOT committed.
 
-   Note : les images d'exemple pointent vers Unsplash pour la démo ;
-   en production, utilise des images locales (ex. "images/...").
+   Note: the example images point to Unsplash for the demo;
+   in production, use local images (e.g. "images/...").
 ============================================================ */
 window.SITE_CONTENT = Object.assign(window.SITE_CONTENT || {}, {
 
-  // — Activités (cartes + carrousel d'images) —
+  // — Activities (cards + image carousel) —
   activities: [
     {
       label: 'Exemple',
@@ -34,13 +34,13 @@ window.SITE_CONTENT = Object.assign(window.SITE_CONTENT || {}, {
     },
   ],
 
-  // — FAQ (accordéon) —
+  // — FAQ (accordion) —
   faqs: [
     { q: "Question d'exemple ?", a: "Réponse d'exemple." },
     { q: 'Une autre question ?', a: 'Une autre réponse.' },
   ],
 
-  // — Documents (sections en carrousel ; icon: 'rules' | 'report') —
+  // — Documents (carousel sections; icon: 'rules' | 'report') —
   docs: [
     {
       id: 'cadre-associatif',
@@ -51,7 +51,7 @@ window.SITE_CONTENT = Object.assign(window.SITE_CONTENT || {}, {
     },
   ],
 
-  // — Textes éditoriaux (prose) ; {name} est résolu depuis la config —
+  // — Editorial texts (prose); {name} is resolved from the config —
   texts: {
     heroDesc: [
       "Première phrase de présentation du GEM {name}.",

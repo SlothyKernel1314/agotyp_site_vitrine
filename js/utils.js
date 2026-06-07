@@ -1,4 +1,4 @@
-/* Échappement HTML — sécurise les valeurs de contenu injectées en innerHTML */
+/* HTML escaping — secures content values injected via innerHTML */
 export function esc(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;')

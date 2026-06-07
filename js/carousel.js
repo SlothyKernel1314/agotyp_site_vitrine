@@ -1,5 +1,5 @@
 /* ============================================================
-   CAROUSEL —  Move cards on its own
+   CAROUSEL — Activity image carousel
 ============================================================ */
 
 
@@ -70,7 +70,7 @@ export function createCarousel(card, images) {
   btnPrev.addEventListener('click', () => goTo(currentIndex - 1));
   btnNext.addEventListener('click', () => goTo(currentIndex + 1));
 
-  // --- Swipe tactile ---
+  // --- Touch swipe ---
   let touchStartX = 0;
   let touchDeltaX = 0;
 
