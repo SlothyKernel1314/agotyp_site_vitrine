@@ -1,120 +1,20 @@
 /* ============================================================
-   DATA — Activities
+   CONTENU — lu depuis window.SITE_CONTENT
+   (content.example.js commité ; content.js réel gitignoré, écrase)
 ============================================================ */
-const activities = [
-  {
-    label: 'Permanence',
-    name: 'Activités Libres',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam.',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'JDR',
-    name: 'Jeu de rôle',
-    desc: "Une partie de jeu de rôle se déroule généralement autour d'une table ou en ligne, avec des joueurs et un maître de jeu (MJ). Le MJ est le narrateur qui établit le cadre de l'aventure et guide les joueurs à travers divers défis.",
-   images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-    ],
-  },
-  {
-    label: 'Cuisine',
-    name: 'Atelier cuisine',
-    desc: 'Des ateliers de cuisine conviviaux pour partager des recettes, apprendre ensemble et créer du lien autour des plaisirs gustatifs dans un cadre bienveillant.',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'Soirée JV',
-    name: 'Soirée Jeux Vidéo',
-    desc: "Rejoignez nos sessions de jeux en ligne pour vous amuser ensemble, à votre rythme, depuis chez vous ou depuis l'espace. Un moment de détente et de partage.",
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'Sorties',
-    name: 'Sorties & Loisirs',
-    desc: 'Musées, parcs, cinémas : des sorties adaptées et préparées ensemble pour découvrir la ville dans un cadre sécurisant et en bonne compagnie.',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'Nanaragora',
-    name: 'Après midi Nanars',
-    desc: " Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'Golf',
-    name: 'Practice au Golf',
-    desc: "Rejoignez nos sessions de jeux en ligne pour vous amuser ensemble, à votre rythme, depuis chez vous ou depuis l'espace. Un moment de détente et de partage.",
-    images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-  {
-    label: 'Animaux',
-    name: 'Médiation Animale',
-    desc: 'Musées, parcs, cinémas : des sorties adaptées et préparées ensemble pour découvrir la ville dans un cadre sécurisant et en bonne compagnie.',
-   images: [
-      { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-      { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-      { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: 'Joueurs autour d\'une table de JDR' },
-    ],
-  },
-];
+const activities  = (window.SITE_CONTENT && window.SITE_CONTENT.activities) || [];
+const faqs        = (window.SITE_CONTENT && window.SITE_CONTENT.faqs)       || [];
+const docSections = (window.SITE_CONTENT && window.SITE_CONTENT.docs)       || [];
 
-/* ============================================================
-   DATA — FAQ
-============================================================ */
-const faqs = [
-  {
-    q: `Qui peut rejoindre le GEM ${(window.SITE_CONFIG && window.SITE_CONFIG.name) || 'Lorem Ipsum'} ?`,
-    a: "Le GEM est ouvert à toute personne adulte se reconnaissant dans le spectre autistique. Aucun diagnostic officiel n'est requis pour participer à nos activités.",
-  },
-  {
-    q: 'Ai-je besoin d\'une notification MDPH ?',
-    a: "Non, le GEM n'est pas un dispositif médico-social.",
-  },
-  {
-    q: 'Comment fonctionnent les activités ?',
-    a: 'Les activités sont proposées chaque semaine et animées par les membres eux-mêmes. Vous pouvez venir à votre rythme, essayer différentes activités, et proposer les vôtres au fil du temps.',
-  },
-  {
-    q: 'Le GEM est-il gratuit ?',
-    a: "Non, le GEM s'inscrit dans une logique associative. À ce titre l'adhésion est fixée à la somme de 20€ par an.",
-  },
-  {
-    q: 'Comment rejoindre le GEM ?',
-    a: "Rien de plus simple : contactez-nous par email ou par téléphone pour planifier une première visite de découverte. Pas d'engagement requis !",
-  },
-  {
-    q: 'Y a-t-il des professionnels de santé au GEM ?',
-    a: "Non; c'est précisément ce qui distingue le GEM d'autres structures. Il est géré par et pour les personnes autistes, dans un esprit d'entraide entre pairs, sans relation soignant-soigné.",
-  },
-  {
-    q: 'Y a-t-il des professionnels au GEM ?',
-    a: "Oui, nous avons une animatrice présente au GEM.",
-  },
-];
+/* Échappement HTML — sécurise les valeurs de contenu injectées en innerHTML */
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
 /* ============================================================
    CAROUSEL —  Move cards on its own
@@ -237,10 +137,10 @@ function renderActivities() {
     card.style.transitionDelay = `${i * 0.08}s`;
 
     card.innerHTML = `
-      <div class="activity-card__img" role="region" aria-label="Carrousel : ${act.name}">
+      <div class="activity-card__img" role="region" aria-label="Carrousel : ${esc(act.name)}">
 
         <!-- Label de catégorie -->
-        <span class="activity-card__label" aria-hidden="true">${act.label}</span>
+        <span class="activity-card__label" aria-hidden="true">${esc(act.label)}</span>
 
         <!-- Compteur -->
         <span class="carousel__counter" aria-live="polite" aria-atomic="true"></span>
@@ -270,8 +170,8 @@ function renderActivities() {
       </div>
 
       <div class="activity-card__body">
-        <h3 class="activity-card__name">${act.name}</h3>
-        <p class="activity-card__desc">${act.desc}</p>
+        <h3 class="activity-card__name">${esc(act.name)}</h3>
+        <p class="activity-card__desc">${esc(act.desc)}</p>
       </div>
     `;
 
@@ -303,14 +203,14 @@ function renderFAQ() {
               id="${btnId}"
               aria-expanded="false"
               aria-controls="${answerId}">
-        ${item.q}
+        ${esc(item.q)}
         <span class="faq__icon" aria-hidden="true">+</span>
       </button>
       <div class="faq__answer"
            id="${answerId}"
            role="region"
            aria-labelledby="${btnId}">
-        <div class="faq__answer-inner">${item.a}</div>
+        <div class="faq__answer-inner">${esc(item.a)}</div>
       </div>
     `;
 
@@ -402,56 +302,6 @@ function initKeyboardHelpers() {
     }
   });
 }
-
-/* ============================================================
-   DATA — Documentation
-============================================================ */
-/* Sections de documentation (ordre d'affichage = ordre du tableau).
-   Chaque section est rendue en carrousel. */
-const docSections = [
-  {
-    id:    'cadre-associatif',
-    title: 'Cadre associatif',
-    items: [
-      {
-        title: 'Statuts',
-        desc:  "Statuts de l'association Agoratypique.",
-        file:  'docs/agotyp_statuts_v.3.0.pdf',
-        icon:  'rules',
-      },
-      {
-        title: 'Règlement intérieur',
-        desc:  'Règles de vie et de fonctionnement du GEM.',
-        file:  'docs/agotyp_reglement_interieur_v.3.0.pdf',
-        icon:  'rules',
-      },
-    ],
-  },
-  {
-    id:    'rapports',
-    title: "Rapports d'activité",
-    items: [
-      {
-        title: "Rapport d'activité 2024",
-        desc:  "Bilan de l'année 2024 : activités, membres, projets.",
-        file:  'docs/agotyp_rapport_activite_2024.pdf',
-        icon:  'report',
-      },
-    ],
-  },
-  {
-    id:    'cadre-legislatif',
-    title: 'Cadre législatif',
-    items: [
-      {
-        title: 'Cahier des charges',
-        desc:  'Cahier des charges du GEM.',
-        file:  'docs/cahier_des_charges_gem.pdf',
-        icon:  'rules',
-      },
-    ],
-  },
-];
 
 /* ============================================================
    SVG ICONS — Documents
@@ -616,8 +466,8 @@ function makeDocCard(doc) {
   card.innerHTML = `
     <div class="doc-card__icon">${docIcons[doc.icon] || ''}</div>
     <div class="doc-card__body">
-      <p class="doc-card__title">${doc.title}</p>
-      <p class="doc-card__desc">${doc.desc}</p>
+      <p class="doc-card__title">${esc(doc.title)}</p>
+      <p class="doc-card__desc">${esc(doc.desc)}</p>
     </div>
     <div class="doc-card__badge">
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

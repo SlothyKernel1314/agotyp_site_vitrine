@@ -23,3 +23,6 @@ docs/
 
 # Configuration réelle du site (jamais versionnée ; voir config.example.js)
 config.js
+
+# Contenu réel du site (jamais versionné ; voir content.example.js)
+content.js
