@@ -1,6 +1,6 @@
 /* ============================================================
    POPULATE — remplit le DOM depuis window.SITE_CONFIG
-   Partagé par index.html et mentions-legales.html.
+   Partagé par index.html et legal.html.
    Rendu en textContent / attributs (pas d'innerHTML) → sûr.
 ============================================================ */
 (function () {
