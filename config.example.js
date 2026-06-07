@@ -21,8 +21,6 @@ window.SITE_CONFIG = Object.assign(window.SITE_CONFIG || {}, {
   email:       "contact@example.org",
   phone:       "+33 1 23 45 67 89",              // affichage ; le lien tel: retire les espaces
   addressLine: "12 rue de l'Exemple, 90000 Ville",
-  hoursDays:   "Lun – Sam",
-  hoursTime:   "10h – 18h",
 
   // — Hébergeur (mentions légales) —
   host: {

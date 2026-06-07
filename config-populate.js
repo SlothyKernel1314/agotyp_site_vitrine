@@ -24,9 +24,16 @@
     });
 
     // Hébergeur (objet imbriqué) :  <… data-cfg-host="name|address|phone">
+    // Valeur vide/absente → on masque la ligne (et le <br> qui la précède).
     document.querySelectorAll('[data-cfg-host]').forEach(el => {
       const v = cfg.host && cfg.host[el.dataset.cfgHost];
-      if (v != null) el.textContent = v;
+      if (v) {
+        el.textContent = v;
+      } else {
+        el.style.display = 'none';
+        const prev = el.previousElementSibling;
+        if (prev && prev.tagName === 'BR') prev.style.display = 'none';
+      }
     });
 
     // Lien e-mail :  <a data-cfg-mailto="email">
