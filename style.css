@@ -1388,3 +1388,47 @@ footer {
   .faq__title        { font-size: 1.7rem; }
   .contact__title    { font-size: 1.6rem; }
 }
+
+/* ============================================================
+   LEGAL PAGE — Mentions légales
+============================================================ */
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+.legal__back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--darkteal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.legal__back:hover { text-decoration: underline; }
+.legal__back:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.legal__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+.legal__section { margin-bottom: 2rem; }
+.legal__section h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.legal__section p {
+  color: #333;
+  line-height: 1.8;
+}
+.legal__section a { color: var(--darkteal); }
+.legal__section code {
+  background: rgba(0,0,0,0.05);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
