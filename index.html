@@ -96,8 +96,8 @@
           <p class="hero__eyebrow" data-cfg="type">Groupe d'Entraide Mutuelle</p>
           <h1 class="hero__title" id="hero-title" data-cfg="name">Lorem Ipsum</h1>
           <p class="hero__subtitle" data-cfg-tpl="{type} à {location}">Groupe d'Entraide Mutuelle à Créteil (94)</p>
-          <div class="hero__desc">
-            <p>Le GEM <span data-cfg="name">Lorem Ipsum</span> est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+          <div class="hero__desc" data-txt-list="heroDesc">
+            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
             <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités.</p>
           </div>
           <a href="#contact" class="btn-primary">
@@ -118,12 +118,12 @@
 
         <div class="reveal">
           <h2 class="about__title" id="about-title">Le GEM</h2>
-          <p class="about__subtitle"><em>[Qui sommes nous ?]</em></p>
+          <p class="about__subtitle"><em data-txt="aboutSubtitle">[Qui sommes nous ?]</em></p>
         </div>
 
         <div class="about__grid">
-          <div class="about__text-block reveal reveal-delay-1">
-            <p>Le GEM <span data-cfg="name">Lorem Ipsum</span> est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+          <div class="about__text-block reveal reveal-delay-1" data-txt-list="aboutText">
+            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
             <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités. </p>
           </div>
           <div class="reveal reveal-delay-2">
@@ -132,9 +132,9 @@
         </div>
 
         <div class="about__card reveal reveal-delay-3">
-          <p class="about__card-title">Nous sommes plus qu'un dispositif.</p>
-          <p class="about__card-text">
-            L'<span data-cfg="name">Lorem Ipsum</span> est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
+          <p class="about__card-title" data-txt="aboutCardTitle">Nous sommes plus qu'un dispositif.</p>
+          <p class="about__card-text" data-txt="aboutCardText">
+            L'Lorem Ipsum est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
           </p>
         </div>
 
@@ -149,7 +149,7 @@
 
         <div class="reveal">
           <h2 class="activities__title" id="activities-title">Ce qu'on fait</h2>
-          <p class="activities__subtitle"><em>[Nos activités]</em></p>
+          <p class="activities__subtitle"><em data-txt="activitiesSubtitle">[Nos activités]</em></p>
         </div>
 
         <!-- Cards injected by main.js -->
@@ -171,7 +171,7 @@
 
             <div class="reveal">
               <h2 class="faq__title" id="faq-title">Des questions&nbsp;?</h2>
-              <p class="faq__subtitle"><em>[Foire aux questions]</em></p>
+              <p class="faq__subtitle"><em data-txt="faqSubtitle">[Foire aux questions]</em></p>
             </div>
 
             <!-- Items injected by main.js -->
@@ -197,7 +197,7 @@
 
         <div class="reveal">
           <h2 class="docs__title" id="docs-title">Documents</h2>
-          <p class="docs__subtitle"><em>[Documentation]</em></p>
+          <p class="docs__subtitle"><em data-txt="docsSubtitle">[Documentation]</em></p>
         </div>
 
         <!-- Grid of documents from main.js -->
@@ -214,11 +214,11 @@
           <!--Left Column — text -->
           <div class="contact__left">
 
-            <p class="contact__label reveal">Nous rejoindre</p>
-            <h2 class="contact__title reveal reveal-delay-1" id="contact-title">
+            <p class="contact__label reveal" data-txt="contactLabel">Nous rejoindre</p>
+            <h2 class="contact__title reveal reveal-delay-1" id="contact-title" data-txt="contactTitle">
               Venez nous rendre visite&nbsp;!
             </h2>
-            <p class="contact__desc reveal reveal-delay-2">
+            <p class="contact__desc reveal reveal-delay-2" data-txt="contactDesc">
               Que vous soyez curieux, à la recherche de lien social ou que vous ayez simplement envie de découvrir l'espace, nos portes vous sont ouvertes.
             </p>
 
@@ -242,6 +242,10 @@
               <div class="contact__detail">
                 <p class="contact__detail-label">Adresse</p>
                 <p class="contact__detail-value" data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</p>
+              </div>
+              <div class="contact__detail">
+                <p class="contact__detail-label">Téléphone</p>
+                <p class="contact__detail-value" data-cfg="phone">+33 1 23 45 67 89</p>
               </div>
               <div class="contact__detail">
                 <p class="contact__detail-label">Email</p>

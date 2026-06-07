@@ -51,4 +51,25 @@ window.SITE_CONTENT = Object.assign(window.SITE_CONTENT || {}, {
     },
   ],
 
+  // — Textes éditoriaux (prose) ; {name} est résolu depuis la config —
+  texts: {
+    heroDesc: [
+      "Première phrase de présentation du GEM {name}.",
+      "Deuxième phrase : objectifs et valeurs de l'association.",
+    ],
+    aboutText: [
+      "Présentation du {name} (premier paragraphe).",
+      "Présentation (deuxième paragraphe).",
+    ],
+    aboutCardTitle: "Une phrase d'accroche.",
+    aboutCardText: "Texte de la carte « à propos » (quelques phrases).",
+    aboutSubtitle:      "[Qui sommes-nous ?]",
+    activitiesSubtitle: "[Nos activités]",
+    faqSubtitle:        "[Foire aux questions]",
+    docsSubtitle:       "[Documentation]",
+    contactLabel: "Nous rejoindre",
+    contactTitle: "Venez nous rendre visite !",
+    contactDesc:  "Texte d'invitation à prendre contact.",
+  },
+
 });

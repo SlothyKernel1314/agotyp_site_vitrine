@@ -4,7 +4,8 @@
    Rendu en textContent / attributs (pas d'innerHTML) → sûr.
 ============================================================ */
 (function () {
-  const cfg = window.SITE_CONFIG || {};
+  const cfg   = window.SITE_CONFIG || {};
+  const texts = (window.SITE_CONTENT && window.SITE_CONTENT.texts) || {};
 
   // Remplace les {clé} d'un gabarit par les valeurs de la config
   function tpl(str) {
@@ -16,6 +17,25 @@
     document.querySelectorAll('[data-cfg]').forEach(el => {
       const v = cfg[el.dataset.cfg];
       if (v != null) el.textContent = v;
+    });
+
+    // Prose éditoriale (SITE_CONTENT.texts) :  <… data-txt="clé"> (résout aussi les {tokens})
+    document.querySelectorAll('[data-txt]').forEach(el => {
+      const v = texts[el.dataset.txt];
+      if (v != null) el.textContent = tpl(v);
+    });
+
+    // Prose multi-paragraphes :  <… data-txt-list="clé"> (tableau → un <p> par item)
+    document.querySelectorAll('[data-txt-list]').forEach(el => {
+      const arr = texts[el.dataset.txtList];
+      if (Array.isArray(arr)) {
+        el.textContent = '';
+        arr.forEach(p => {
+          const para = document.createElement('p');
+          para.textContent = tpl(p);
+          el.appendChild(para);
+        });
+      }
     });
 
     // Texte « gabarit » :  <… data-cfg-tpl="© {year} {name}…">
