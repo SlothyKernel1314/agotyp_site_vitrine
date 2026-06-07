@@ -1,28 +1,28 @@
-# Fichiers système (OS)
+# OS files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Éditeurs / IDE
+# Editors / IDE
 .vscode/
 .idea/
 *.swp
 *~
 
-# Configuration locale Claude Code (jamais versionnée)
+# Claude Code local config (never versioned)
 .claude/
 
 # Logs
 *.log
 
-# Documents de travail locaux (non versionnés)
+# Local working docs (not versioned)
 TODO.md
 
-# Documents PDF de l'association (non versionnés)
+# Association PDF documents (not versioned)
 docs/
 
-# Configuration réelle du site (jamais versionnée ; voir config.example.js)
-config.js
+# Real site configuration (never versioned; see config/config.example.js)
+config/config.js
 
-# Contenu réel du site (jamais versionné ; voir content.example.js)
-content.js
+# Real site content (never versioned; see config/content.example.js)
+config/content.js

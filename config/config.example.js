@@ -5,7 +5,7 @@
    and serves as a fallback if config.js (real, gitignored) is absent.
 
    For the real values:
-     cp config.example.js config.js
+     cp config/config.example.js config/config.js
    then fill config.js — it overrides these values and is NOT committed.
 ============================================================ */
 window.SITE_CONFIG = Object.assign(window.SITE_CONFIG || {}, {

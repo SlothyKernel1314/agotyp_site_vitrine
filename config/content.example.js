@@ -5,7 +5,7 @@
    (real, gitignored) is absent.
 
    For the real content:
-     cp content.example.js content.js
+     cp config/content.example.js config/content.js
    then fill content.js — it overrides these values and is NOT committed.
 
    Note: the example images point to Unsplash for the demo;

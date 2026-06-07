@@ -7,7 +7,7 @@ Les ressources visuelles ci-dessous en sont **explicitement exclues**.
 
 **Œuvres graphiques — © 2026 Pxelgon, tous droits réservés :**
 
-- le logo « Agora » (`AGORA_LOGO_RGB.svg`) et le favicon (`favicon.ico`) ;
+- le logo « Agora » (`images/logo.svg`) et le favicon (`favicon.ico`) ;
 - les mascottes (`images/Mascotte_*.png`, `images/Contact_Mascotte.png`).
 
 **Nom et identité de marque :**
