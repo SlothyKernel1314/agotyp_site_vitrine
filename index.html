@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-cfg-title="{name} — {type}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f5f0e8" />
   <title>Lorem Ipsum — Groupe d'Entraide Mutuelle</title>
-  <meta name="description" content="Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçu par des autistes pour des autistes." />
+  <meta name="description" data-cfg-content="metaDescription" content="Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçu par des autistes pour des autistes." />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Police Lexend — auto-hébergée (RGPD + perf) ; licence OFL : fonts/OFL.txt -->
@@ -13,6 +13,10 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Configuration du site (exemple commité ; config.js réel gitignoré, écrase) -->
+  <script src="config.example.js"></script>
+  <script src="config.js"></script>
 </head>
 <body>
 
@@ -28,7 +32,7 @@
   <nav class="sidebar-nav" aria-label="Navigation principale">
 
     <!-- Logo -->
-    <a class="sidebar-logo" href="#accueil" aria-label="Lorem Ipsum — Retour à l'accueil">
+    <a class="sidebar-logo" href="#accueil" data-cfg-aria-label="{name} — Retour à l'accueil" aria-label="Lorem Ipsum — Retour à l'accueil">
       <img src="AGORA_LOGO_RGB.svg" alt="" width="40" height="40" />
     </a>
 
@@ -85,11 +89,11 @@
  
       <div class="section__inner">
         <div class="hero__left">
-          <p class="hero__eyebrow">Groupe d'Entraide Mutuelle</p>
-          <h1 class="hero__title" id="hero-title">Lorem Ipsum</h1>
-          <p class="hero__subtitle">Groupe d'Entraide Mutuelle</p>
+          <p class="hero__eyebrow" data-cfg="type">Groupe d'Entraide Mutuelle</p>
+          <h1 class="hero__title" id="hero-title" data-cfg="name">Lorem Ipsum</h1>
+          <p class="hero__subtitle" data-cfg-tpl="{type} à {location}">Groupe d'Entraide Mutuelle à Créteil (94)</p>
           <div class="hero__desc">
-            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+            <p>Le GEM <span data-cfg="name">Lorem Ipsum</span> est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
             <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités.</p>
           </div>
           <a href="#contact" class="btn-primary">
@@ -115,7 +119,7 @@
 
         <div class="about__grid">
           <div class="about__text-block reveal reveal-delay-1">
-            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+            <p>Le GEM <span data-cfg="name">Lorem Ipsum</span> est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
             <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités. </p>
           </div>
           <div class="reveal reveal-delay-2">
@@ -126,7 +130,7 @@
         <div class="about__card reveal reveal-delay-3">
           <p class="about__card-title">Nous sommes plus qu'un dispositif.</p>
           <p class="about__card-text">
-            Lorem Ipsum est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
+            L'<span data-cfg="name">Lorem Ipsum</span> est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
           </p>
         </div>
 
@@ -215,14 +219,14 @@
             </p>
 
             <div class="contact__actions reveal reveal-delay-3">
-              <a href="mailto:loremipsume@gmail.com" class="btn-teal" aria-label="Envoyer un email à Lorem Ipsum">
+              <a href="mailto:contact@example.org" class="btn-teal" data-cfg-mailto="email" data-cfg-aria-label="Envoyer un email à {name}" aria-label="Envoyer un email à Lorem Ipsum">
                 Nous écrire
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
                   <path d="M1 5L8 9.5L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
               </a>
-              <a href="tel:+xxxxxxxxx" title="Appeler l'animatrice" class="btn-outline" aria-label="Appeler Lorem Ipsum">
+              <a href="tel:+33123456789" title="Appeler l'animatrice" class="btn-outline" data-cfg-tel="phone" data-cfg-aria-label="Appeler {name}" aria-label="Appeler Lorem Ipsum">
                 Nous appeler
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 2h3l1.5 4L6 7.5c1 2 2.5 3.5 4.5 4.5L12 10.5l4 1.5V15a1 1 0 01-1 1C5.4 16 0 10.6 0 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -233,15 +237,15 @@
             <div class="contact__details reveal reveal-delay-4">
               <div class="contact__detail">
                 <p class="contact__detail-label">Adresse</p>
-                <p class="contact__detail-value">Lorem Ipsum, 90000 Lorem</p>
+                <p class="contact__detail-value" data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</p>
               </div>
               <div class="contact__detail">
                 <p class="contact__detail-label">Horaires</p>
-                <p class="contact__detail-value">Lun – Sam<br>10h–18h</p>
+                <p class="contact__detail-value"><span data-cfg="hoursDays">Lun – Sam</span><br><span data-cfg="hoursTime">10h – 18h</span></p>
               </div>
               <div class="contact__detail">
                 <p class="contact__detail-label">Email</p>
-                <p class="contact__detail-value">xloremipsum@gmail.com</p>
+                <p class="contact__detail-value" data-cfg="email">contact@example.org</p>
               </div>
             </div>
 
@@ -263,7 +267,7 @@
   ================================================ -->
   <footer>
     <div class="footer__inner">
-      <p class="footer__copy">© 2026 Loremipsum — Groupe d'Entraide Mutuelle. Tous droits réservés. Fait par Pxelgon.</p>
+      <p class="footer__copy" data-cfg-tpl="© {year} {name} — {type}. Tous droits réservés. Fait par {footerCredit}.">© 2026 Lorem Ipsum — Groupe d'Entraide Mutuelle. Tous droits réservés. Fait par Pxelgon.</p>
       <nav class="footer__links" aria-label="Liens de bas de page">
         <a href="#accueil">Accueil</a>
         <a href="#a-propos">À propos</a>
@@ -359,6 +363,7 @@
   </nav>
   
   <!-- JavaScript -->
+  <script src="config-populate.js"></script>
   <script src="main.js"></script>
 
 </body>

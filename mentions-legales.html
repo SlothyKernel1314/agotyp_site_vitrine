@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-cfg-title="Mentions légales — {name}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,10 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Configuration du site (exemple commité ; config.js réel gitignoré, écrase) -->
+  <script src="config.example.js"></script>
+  <script src="config.js"></script>
 </head>
 <body>
 
@@ -24,26 +28,26 @@
     <section class="legal__section">
       <h2>Éditeur du site</h2>
       <p>
-        <strong>[Nom de l'association]</strong>, association régie par la loi
-        du 1ᵉʳ juillet 1901.<br>
-        Siège social : [Adresse du siège social]<br>
-        Email : [email de contact]<br>
-        Téléphone : [numéro de téléphone]<br>
-        Numéro RNA : [W_________]
+        <strong data-cfg="legalName">Lorem Ipsum</strong>, association régie par
+        la loi du 1ᵉʳ juillet 1901.<br>
+        Siège social : <span data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</span><br>
+        Email : <span data-cfg="email">contact@example.org</span><br>
+        Téléphone : <span data-cfg="phone">+33 1 23 45 67 89</span><br>
+        Numéro RNA : <span data-cfg="rna">W123456789</span>
       </p>
     </section>
 
     <section class="legal__section">
       <h2>Responsable de la publication</h2>
-      <p>[Nom du ou de la responsable de la publication]</p>
+      <p><span data-cfg="publicationManager">Prénom Nom</span></p>
     </section>
 
     <section class="legal__section">
       <h2>Hébergeur</h2>
       <p>
-        [Nom de l'hébergeur]<br>
-        [Adresse de l'hébergeur]<br>
-        [Téléphone de l'hébergeur]
+        <span data-cfg-host="name">Nom de l'hébergeur</span><br>
+        <span data-cfg-host="address">Adresse de l'hébergeur</span><br>
+        <span data-cfg-host="phone">Téléphone de l'hébergeur</span>
       </p>
     </section>
 
@@ -60,12 +64,15 @@
       <h2>Propriété intellectuelle</h2>
       <p>
         Le code source de ce site est distribué sous licence MIT. Les éléments
-        visuels (logo, mascottes) et la marque « [Nom de l'association] » sont
-        protégés et ne sont pas couverts par cette licence (voir les fichiers
+        visuels (logo, mascottes) et la marque « <span data-cfg="name">Lorem Ipsum</span> »
+        sont protégés et ne sont pas couverts par cette licence (voir les fichiers
         <code>LICENSE</code> et <code>ASSETS-LICENSE.md</code> du dépôt).
       </p>
     </section>
   </main>
+
+  <!-- Remplissage depuis la config -->
+  <script src="config-populate.js"></script>
 
 </body>
 </html>

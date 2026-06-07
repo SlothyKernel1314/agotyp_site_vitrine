@@ -87,7 +87,7 @@ const activities = [
 ============================================================ */
 const faqs = [
   {
-    q: 'Qui peut rejoindre le GEM Loremipsum ?',
+    q: `Qui peut rejoindre le GEM ${(window.SITE_CONFIG && window.SITE_CONFIG.name) || 'Lorem Ipsum'} ?`,
     a: "Le GEM est ouvert à toute personne adulte se reconnaissant dans le spectre autistique. Aucun diagnostic officiel n'est requis pour participer à nos activités.",
   },
   {

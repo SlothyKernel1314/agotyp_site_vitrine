@@ -20,3 +20,6 @@ TODO.md
 
 # Documents PDF de l'association (non versionnés)
 docs/
+
+# Configuration réelle du site (jamais versionnée ; voir config.example.js)
+config.js
