@@ -212,9 +212,8 @@
       <div class="section__inner">
         <div class="contact__inner">
 
-          <!--Left Column — text -->
-          <div class="contact__left">
-
+          <!-- Text -->
+          <div class="contact__text">
             <p class="contact__label reveal" data-txt="contactLabel">Nous rejoindre</p>
             <h2 class="contact__title reveal reveal-delay-1" id="contact-title" data-txt="contactTitle">
               Venez nous rendre visite&nbsp;!
@@ -222,43 +221,42 @@
             <p class="contact__desc reveal reveal-delay-2" data-txt="contactDesc">
               Que vous soyez curieux, à la recherche de lien social ou que vous ayez simplement envie de découvrir l'espace, nos portes vous sont ouvertes.
             </p>
+          </div>
 
-            <div class="contact__actions reveal reveal-delay-3">
-              <a href="mailto:contact@example.org" class="btn-teal" data-cfg-mailto="email" data-cfg-aria-label="Envoyer un email à {name}" aria-label="Envoyer un email à Lorem Ipsum">
-                Nous écrire
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M1 5L8 9.5L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </a>
-              <a href="tel:+33123456789" title="Appeler l'animatrice" class="btn-outline" data-cfg-tel="phone" data-cfg-aria-label="Appeler {name}" aria-label="Appeler Lorem Ipsum">
-                Nous appeler
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 2h3l1.5 4L6 7.5c1 2 2.5 3.5 4.5 4.5L12 10.5l4 1.5V15a1 1 0 01-1 1C5.4 16 0 10.6 0 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                </svg>
-              </a>
+          <!-- Buttons -->
+          <div class="contact__actions reveal reveal-delay-3">
+            <a href="mailto:contact@example.org" class="btn-teal" data-cfg-mailto="email" data-cfg-aria-label="Envoyer un email à {name}" aria-label="Envoyer un email à Lorem Ipsum">
+              Nous écrire
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M1 5L8 9.5L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="tel:+33123456789" title="Appeler l'animatrice" class="btn-outline" data-cfg-tel="phone" data-cfg-aria-label="Appeler {name}" aria-label="Appeler Lorem Ipsum">
+              Nous appeler
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 2h3l1.5 4L6 7.5c1 2 2.5 3.5 4.5 4.5L12 10.5l4 1.5V15a1 1 0 01-1 1C5.4 16 0 10.6 0 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mascot -->
+          <img src="images/Contact_Mascotte.png" alt="" class="contact__mascot reveal reveal-delay-1" width="2048" height="2048" loading="lazy" decoding="async" />
+
+          <!-- Details -->
+          <div class="contact__details reveal reveal-delay-4">
+            <div class="contact__detail">
+              <p class="contact__detail-label">Adresse</p>
+              <p class="contact__detail-value" data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</p>
             </div>
-
-            <div class="contact__details reveal reveal-delay-4">
-              <div class="contact__detail">
-                <p class="contact__detail-label">Adresse</p>
-                <p class="contact__detail-value" data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</p>
-              </div>
-              <div class="contact__detail">
-                <p class="contact__detail-label">Téléphone</p>
-                <p class="contact__detail-value" data-cfg="phone">+33 1 23 45 67 89</p>
-              </div>
-              <div class="contact__detail">
-                <p class="contact__detail-label">Email</p>
-                <p class="contact__detail-value" data-cfg="email">contact@example.org</p>
-              </div>
+            <div class="contact__detail">
+              <p class="contact__detail-label">Téléphone</p>
+              <p class="contact__detail-value" data-cfg="phone">+33 1 23 45 67 89</p>
             </div>
-
-          </div><!-- /.contact__left -->
-
-          <!-- Right Column — Mascot -->
-          <div class="contact__right">
-            <img src="images/Contact_Mascotte.png" alt="" class="contact__mascot reveal reveal-delay-1" width="2048" height="2048" loading="lazy" decoding="async" />
+            <div class="contact__detail">
+              <p class="contact__detail-label">Email</p>
+              <p class="contact__detail-value" data-cfg="email">contact@example.org</p>
+            </div>
           </div>
 
         </div><!-- /.contact__inner -->

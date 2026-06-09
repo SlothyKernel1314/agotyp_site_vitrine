@@ -67,7 +67,16 @@
   .doc-card__icon { width: 44px; height: 44px; }
 
 
-  /* Contact */
+  /* Contact — text full-width, then buttons + mascot on the SAME row, then details */
+  .contact__inner {
+    grid-template-areas:
+      "text    text"
+      "actions mascot"
+      "details details";
+    align-items: center;
+    gap: 0 1rem;
+  }
+  .contact__mascot { width: clamp(130px, 34vw, 240px); margin-bottom: 0; align-self: center; }
   .contact__title   { font-size: clamp(1.8rem, 7vw, 3rem); }
   .contact__details { gap: 1.5rem; }
 

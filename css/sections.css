@@ -279,20 +279,21 @@
   overflow: hidden;
 }
 
-/* Two-column grid: text | mascot */
+/* Named-area grid. Desktop: text/buttons/details stacked on the left, mascot spanning on the right. */
 .contact__inner {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
+  grid-template-areas:
+    "text    mascot"
+    "actions mascot"
+    "details mascot";
+  align-items: start;
   gap: 0 2rem;
 }
-
-/* Left column */
-.contact__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+.contact__text    { grid-area: text; }
+.contact__actions { grid-area: actions; }
+.contact__details { grid-area: details; }
+.contact__mascot  { grid-area: mascot; }
 
 .contact__label {
   font-size: 0.85rem;
@@ -349,15 +350,7 @@
 }
 .contact__detail-value a:hover { text-decoration: underline; }
 
-/* Right column — mascot */
-.contact__right {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  align-self: stretch;
-}
-
+/* Mascot — spans the right column on desktop (see grid-template-areas) */
 .contact__mascot {
   width: clamp(286px, 30vw, 462px);
   height: auto;
@@ -367,7 +360,7 @@
   filter: drop-shadow(0 10px 6px rgba(234, 132, 4, 0.15));
   transition: transform var(--transition), filter var(--transition);
   margin-bottom: 5rem;
-  align-self: flex-end;
+  align-self: end;
 }
 .contact__mascot:hover {
   transform: translateY(-8px) rotate(-2deg) scale(1.03);
