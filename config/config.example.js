@@ -20,7 +20,12 @@ window.SITE_CONFIG = Object.assign(window.SITE_CONFIG || {}, {
   // — Contact —
   email:       "contact@example.org",
   phone:       "+33 1 23 45 67 89",              // display; the tel: link strips spaces
-  addressLine: "12 rue de l'Exemple, 90000 Ville",
+  address: {                              // structured → display line + JSON-LD derived from it
+    street:     "12 rue de l'Exemple",
+    postalCode: "90000",
+    city:       "Ville",
+    country:    "FR",                     // ISO 3166-1 alpha-2
+  },
 
   // — Host (legal notice) —
   host: {

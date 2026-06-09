@@ -7,9 +7,46 @@
   const cfg   = window.SITE_CONFIG || {};
   const texts = (window.SITE_CONTENT && window.SITE_CONTENT.texts) || {};
 
+  // Build the display address line from the structured address (single source of truth)
+  if (cfg.address) {
+    const a = cfg.address;
+    cfg.addressLine = [a.street, [a.postalCode, a.city].filter(Boolean).join(' ')]
+      .filter(Boolean).join(' - ');
+  }
+
   // Replace a template's {key} tokens with the config values
   function tpl(str) {
     return str.replace(/\{(\w+)\}/g, (_, k) => (cfg[k] != null ? cfg[k] : ''));
+  }
+
+  // Structured data (JSON-LD, schema.org NGO) built from the config — helps search engines
+  function injectJsonLd() {
+    if (!cfg.name) return;
+    const a = cfg.address || {};
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'NGO',
+      name: cfg.name,
+      legalName: cfg.legalName,
+      description: cfg.metaDescription,
+      url: location.origin + '/',
+      logo: location.origin + '/images/logo.svg',
+      email: cfg.email,
+      telephone: cfg.phone,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: a.street,
+        postalCode: a.postalCode,
+        addressLocality: a.city,
+        addressCountry: a.country,
+      },
+      areaServed: cfg.location,
+    };
+    if (cfg.rna) data.identifier = cfg.rna;   // n° RNA (association)
+    const el = document.createElement('script');
+    el.type = 'application/ld+json';
+    el.textContent = JSON.stringify(data, null, 2);
+    document.head.appendChild(el);
   }
 
   function populate() {
@@ -82,6 +119,8 @@
     // Page title:  <html data-cfg-title="{name} — {type}">
     const t = document.documentElement.dataset.cfgTitle;
     if (t) document.title = tpl(t);
+
+    injectJsonLd();
   }
 
   if (document.readyState === 'loading') {
