@@ -35,7 +35,6 @@
   .hero__desc     { font-size: 0.9rem; }
 
   /* About */
-  .about__grid  { grid-template-columns: 1fr; gap: 1.5rem; }
   .about__title { font-size: clamp(1.8rem, 7vw, 3rem); }
   .about__card  { padding: 1.75rem 1.5rem; }
 
@@ -46,11 +45,10 @@
   /* FAQ */
   .faq__title { font-size: clamp(2rem, 9vw, 4rem); }
   .faq__list  { max-width: 100%; }
-  /* FAQ and About mascots: stack to a column on tablet */
+  /* FAQ mascot: stack to a column on tablet */
   .faq__layout       { grid-template-columns: 1fr; }
   .faq__mascot-wrap  { position: static; justify-content: center; margin-top: 2rem; }
   .faq__mascot       { width: clamp(140px, 45vw, 220px); }
-  .mascot-img--about { border-radius: var(--radius-lg); }
 
   /* Documentation */
   .docs__title  { font-size: clamp(2rem, 8vw, 3.5rem); }

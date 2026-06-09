@@ -111,12 +111,9 @@
 }
 .about__subtitle em { font-style: normal; color: var(--dark); font-weight: 600; }
 
-.about__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+.about__text-block {
+  max-width: 640px;
   margin-top: 3rem;
-  align-items: center;
 }
 
 .about__text-block p + p { margin-top: 0.75rem; }
