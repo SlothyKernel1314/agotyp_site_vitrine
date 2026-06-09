@@ -184,7 +184,7 @@
 }
 
 .faq__mascot {
-  width: clamp(280px, 28vw, 440px);
+  width: clamp(200px, 24vw, 240px);
   height: auto;
   display: block;
   mix-blend-mode: multiply;
