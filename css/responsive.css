@@ -2,9 +2,9 @@
    RESPONSIVE — Large tablet (≤ 1024px)
 ============================================================ */
 @media (max-width: 1024px) {
-  .section { padding-right: calc(var(--sidebar-w) * 3 + 0.5rem); }
+  .section { padding-right: calc(var(--sidebar-w) * 5 + 2rem); }
   .section__inner { padding: 0 2rem; }
-  footer { padding-right: calc(var(--sidebar-w) * 3 + 2rem); }
+  footer { padding-right: calc(var(--sidebar-w) * 5 + 2rem); }
   .activities__grid { grid-template-columns: repeat(2, 1fr); }
 }
 

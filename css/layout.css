@@ -5,7 +5,7 @@
   min-height: 100vh;    /* fallback */
   min-height: 100dvh;   /* visible viewport on mobile/tablet */
   padding: 5rem 0;
-  padding-right: calc(var(--sidebar-w) * 3 + 1rem);
+  padding-right: calc(var(--sidebar-w) * 5 + 2rem);
   position: relative;
   display: flex;
   align-items: center;
@@ -62,6 +62,6 @@
 .section-divider {
   height: 1px;
   background: rgba(0,0,0,0.07);
-  margin-right: calc(var(--sidebar-w) * 3);
+  margin-right: calc(var(--sidebar-w) * 5 + 2rem);
 }
 
