@@ -9,6 +9,26 @@
 }
 
 /* ============================================================
+   HERO STACKING — text above, mascot below.
+   Triggers whenever the side-by-side hero would overlap: any width ≤1024px
+   (all orientations) + tablets in portrait up to 1200px. Independent of the
+   sidebar/nav choice (landscape keeps its sidebar, the hero just restacks).
+============================================================ */
+@media (max-width: 1024px), (max-width: 1200px) and (orientation: portrait) {
+  .hero-section                 { flex-direction: column; justify-content: center; }
+  .hero-section .section__inner { order: 1; }
+  .hero__mascot-wrap {
+    position: static;
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+  .hero__mascot-img { width: auto; height: auto; max-width: 75%; max-height: 38vh; }
+}
+
+/* ============================================================
    MOBILE LAYOUT — phones (≤768px) + tablets in PORTRAIT (≤1200px)
    sidebar → bottom nav, stacked sections. Landscape tablets & desktop keep the sidebar.
 ============================================================ */
@@ -30,18 +50,7 @@
   .section__inner { padding: 0 1.5rem; }
   .section-divider { margin-right: 0; }
 
-  /* Hero — stack: text first, mascot below (avoids overlap on mobile) */
-  .hero-section                 { flex-direction: column; }
-  .hero-section .section__inner { order: 1; }
-  .hero__mascot-wrap {
-    position: static;
-    order: 2;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-top: 1.5rem;
-  }
-  .hero__mascot-img { width: auto; height: auto; max-width: 75%; max-height: 38vh; }
+  /* Hero font sizes (stacking handled in the dedicated query below) */
   .hero__title    { font-size: clamp(2.2rem, 8vw, 3.5rem); }
   .hero__subtitle { font-size: clamp(1.1rem, 4vw, 1.6rem); }
   .hero__desc     { font-size: 0.9rem; }
