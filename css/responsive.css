@@ -29,7 +29,18 @@
   .section__inner { padding: 0 1.5rem; }
   .section-divider { margin-right: 0; }
 
-  /* Hero */
+  /* Hero — stack: text first, mascot below (avoids overlap on mobile) */
+  .hero-section                 { flex-direction: column; }
+  .hero-section .section__inner { order: 1; }
+  .hero__mascot-wrap {
+    position: static;
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+  .hero__mascot-img { width: auto; height: auto; max-width: 75%; max-height: 38vh; }
   .hero__title    { font-size: clamp(2.2rem, 8vw, 3.5rem); }
   .hero__subtitle { font-size: clamp(1.1rem, 4vw, 1.6rem); }
   .hero__desc     { font-size: 0.9rem; }
