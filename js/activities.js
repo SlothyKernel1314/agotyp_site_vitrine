@@ -59,3 +59,58 @@ export function renderActivities() {
     createCarousel(card, act.images);
   });
 }
+
+/* ============================================================
+   SHOW MORE — single-column (mobile) only: show the first N cards,
+   reveal the rest via a button. Full grid stays on larger screens.
+============================================================ */
+const VISIBLE_ON_MOBILE = 4;
+const singleColumn = window.matchMedia('(max-width: 480px)');
+
+export function initActivitiesShowMore() {
+  const grid = document.getElementById('activitiesGrid');
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.activity-card'));
+  if (cards.length <= VISIBLE_ON_MOBILE) return;   // nothing to fold
+  const extra = cards.slice(VISIBLE_ON_MOBILE);
+
+  // Toggle button, inserted right after the grid
+  const wrap = document.createElement('div');
+  wrap.className = 'activities__more';
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'activities__more-btn';
+  btn.setAttribute('aria-controls', 'activitiesGrid');
+  wrap.appendChild(btn);
+  grid.insertAdjacentElement('afterend', wrap);
+
+  let expanded = false;
+
+  // A revealed card must never stay at opacity:0: the .reveal observer
+  // can't fire while a card is display:none, so force .visible here.
+  function reveal(card) {
+    card.hidden = false;
+    card.classList.add('visible');
+  }
+
+  function render() {
+    if (singleColumn.matches) {
+      wrap.hidden = false;
+      extra.forEach(card => {
+        if (expanded) reveal(card);
+        else card.hidden = true;
+      });
+      btn.setAttribute('aria-expanded', String(expanded));
+      btn.textContent = expanded ? 'Voir moins' : "Voir plus d'activités";
+    } else {
+      // Larger screens: everything visible, button removed from the flow
+      wrap.hidden = true;
+      extra.forEach(card => { if (card.hidden) reveal(card); });
+    }
+  }
+
+  btn.addEventListener('click', () => { expanded = !expanded; render(); });
+  singleColumn.addEventListener('change', render);
+  render();
+}
