@@ -30,44 +30,65 @@ activités, foire aux questions, documentation et informations de contact.
 
 ## 🛠️ Technologies
 
-- **HTML5, CSS3, JavaScript (vanilla)** — aucun framework, aucune dépendance.
-- Police [Lexend](https://fonts.google.com/specimen/Lexend) via Google Fonts.
-- Contenu (activités, FAQ, documents) **généré dynamiquement** côté client
-  depuis des données structurées dans `main.js`.
+- **HTML5, CSS3, JavaScript (vanilla)** — aucun framework, **aucune étape de build**, aucune dépendance npm.
+- Police **Lexend auto-hébergée** (fichiers `.woff2` locaux + `@font-face`) — aucune requête externe (respect du RGPD).
+- CSS modulaire dans `css/`, JavaScript en **modules ES** dans `js/`.
+- Contenu et configuration **séparés du code** (dossier `config/`, voir ci-dessous) et **injectés dynamiquement** côté client.
 - **Accessibilité** soignée : navigation clavier, attributs ARIA, lien
-  d'évitement, contrastes et alternatives textuelles.
+  d'évitement, contrastes, `prefers-reduced-motion` et alternatives textuelles.
 
 ## 📁 Structure du projet
 
 ```
 agotyp_site_vitrine/
-├── index.html          # Page principale (one-page)
-├── style.css           # Styles
-├── main.js             # Scripts (rendu des contenus, carrousels, FAQ…)
-├── favicon.ico         # Icône du site
-├── AGORA_LOGO_RGB.svg  # Logo
-├── images/             # Mascottes et illustrations
-│   ├── Mascotte_bonjour.png
-│   ├── Mascotte_joueur.png
-│   ├── Mascotte_libraire.png
-│   └── Contact_Mascotte.png
-├── LICENSE             # Licence du code (MIT)
-└── ASSETS-LICENSE.md   # Licence des ressources visuelles & de la marque
+├── index.html              # Page principale (one-page)
+├── legal.html              # Mentions légales
+├── favicon.ico
+├── css/                    # Styles (liés dans l'ordre de la cascade)
+│   ├── fonts.css · base.css · navigation.css · layout.css
+│   └── components.css · sections.css · legal.css · responsive.css
+├── js/                     # Scripts (modules ES)
+│   ├── main.js             # Point d'entrée
+│   ├── config-populate.js  # Injection de la config dans le DOM
+│   ├── data.js · utils.js · carousel.js
+│   └── activities.js · faq.js · docs.js · ui.js
+├── config/                 # Données & configuration (voir ci-dessous)
+│   ├── config.example.js   # Modèle identité/contact/légal (versionné)
+│   └── content.example.js  # Modèle activités/FAQ/docs/textes (versionné)
+├── fonts/                  # Lexend (.woff2) + licence OFL
+├── images/                 # Logo + mascottes
+├── docs/                   # PDF de l'association (NON versionné)
+├── LICENSE                 # Licence du code (MIT)
+└── ASSETS-LICENSE.md       # Licence des ressources visuelles & de la marque
 ```
 
-## 🚀 Lancer le site en local
+## 🚀 Installation & lancement (local)
 
-Le site est statique, aucune installation n'est nécessaire.
+> Le site est statique (pas de build), mais il charge des **modules ES** : il doit
+> être **servi via HTTP**. L'ouvrir en `file://` (double-clic) **ne fonctionne pas**.
 
-- **Le plus simple** : ouvrir `index.html` directement dans un navigateur.
-- **Recommandé** (pour un rendu fidèle) : servir le dossier en local, par exemple
-  avec l'extension **Live Server** de VS Code, ou en ligne de commande :
+**1. Configuration & contenu** — les vraies données ne sont pas versionnées ;
+on les crée à partir des modèles :
 
-  ```bash
-  # Python 3
-  python3 -m http.server 8000
-  # puis ouvrir http://localhost:8000
-  ```
+```bash
+cp config/config.example.js  config/config.js     # identité, contact, mentions légales
+cp config/content.example.js config/content.js    # activités, FAQ, documents, textes
+```
+
+Puis éditer `config/config.js` et `config/content.js` avec les vraies valeurs.
+
+**2. Documents** — déposer les PDF de l'association dans `docs/` (dossier non
+versionné), selon les chemins déclarés dans `config/content.js`.
+
+**3. Servir le site** — par exemple :
+
+```bash
+# Python 3
+python3 -m http.server 8000
+# puis ouvrir http://localhost:8000
+```
+
+Ou via l'extension **Live Server** de VS Code.
 
 ## ♿ Accessibilité
 
