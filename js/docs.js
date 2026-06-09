@@ -72,7 +72,9 @@ export function renderDocs() {
 /* ── Builds a document card carousel (adapts to the item count) ── */
 function createDocsCarousel(items) {
   const total    = items.length;
-  const visible  = Math.min(DOCS_VISIBLE, total);
+  // 1 card at a time on narrow screens (avoids cramped cards + badge overlapping the title)
+  const perView  = window.matchMedia('(max-width: 600px)').matches ? 1 : DOCS_VISIBLE;
+  const visible  = Math.min(perView, total);
   const maxIndex = Math.max(0, total - visible);
 
   const wrap = document.createElement('div');
