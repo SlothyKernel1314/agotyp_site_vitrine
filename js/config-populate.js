@@ -105,12 +105,12 @@
       if (v) el.setAttribute('href', 'tel:' + String(v).replace(/[^\d+]/g, ''));
     });
 
-    // Map link:  <a data-cfg-map> → OpenStreetMap search for the structured address
+    // Map link:  <a data-cfg-map> → Google Maps search for the structured address (link only, no embed)
     document.querySelectorAll('[data-cfg-map]').forEach(el => {
       const a = cfg.address;
       if (!a) return;
       const q = encodeURIComponent([a.street, a.postalCode, a.city].filter(Boolean).join(' '));
-      el.setAttribute('href', 'https://www.openstreetmap.org/search?query=' + q);
+      el.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + q);
     });
 
     // "content" attribute (meta):  <meta data-cfg-content="metaDescription">
