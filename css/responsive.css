@@ -17,6 +17,9 @@
 @media (max-width: 1024px), (max-width: 1200px) and (orientation: portrait) {
   .hero-section                 { flex-direction: column; justify-content: center; }
   .hero-section .section__inner { order: 1; }
+  /* Fill the width when stacked (drop the desktop column caps) */
+  .hero__left { max-width: none; }
+  .hero__desc { max-width: none; }
   .hero__mascot-wrap {
     position: static;
     order: 2;
@@ -56,8 +59,9 @@
   .hero__desc     { font-size: 0.9rem; }
 
   /* About */
-  .about__title { font-size: clamp(1.8rem, 7vw, 3rem); }
-  .about__card  { padding: 1.75rem 1.5rem; }
+  .about__title      { font-size: clamp(1.8rem, 7vw, 3rem); }
+  .about__text-block { max-width: none; }   /* fill the width when stacked */
+  .about__card       { padding: 1.75rem 1.5rem; }
 
   /* Activities */
   .activities__grid  { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
@@ -88,6 +92,7 @@
   }
   .contact__mascot { width: clamp(130px, 34vw, 240px); margin-bottom: 0; align-self: center; }
   .contact__title   { font-size: clamp(1.8rem, 7vw, 3rem); }
+  .contact__desc    { max-width: none; }   /* fill the width when stacked */
   .contact__details { gap: 1.5rem; }
 
   /* Footer */
