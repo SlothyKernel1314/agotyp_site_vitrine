@@ -165,25 +165,21 @@
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section__inner">
 
+        <!-- Title (full width, above the columns) -->
+        <div class="reveal">
+          <h2 class="faq__title" id="faq-title">Des questions&nbsp;?</h2>
+          <p class="faq__subtitle"><em data-txt="faqSubtitle">[Foire aux questions]</em></p>
+        </div>
+
         <div class="faq__layout">
 
-          <!-- Left column: title + questions -->
-          <div class="faq__content">
+          <!-- Left column: questions (injected by JS — js/faq.js) -->
+          <div class="faq__list reveal reveal-delay-1" id="faqList" role="list"></div>
 
-            <div class="reveal">
-              <h2 class="faq__title" id="faq-title">Des questions&nbsp;?</h2>
-              <p class="faq__subtitle"><em data-txt="faqSubtitle">[Foire aux questions]</em></p>
-            </div>
-
-            <!-- Items injected by JS (js/faq.js) -->
-            <div class="faq__list reveal reveal-delay-1" id="faqList" role="list"></div>
-
+          <!-- Right column: librarian mascot (decorative) -->
+          <div class="faq__mascot-wrap reveal reveal-delay-2" aria-hidden="true">
+            <img src="images/mascotte_libraire.webp" alt="" class="faq__mascot" />
           </div>
-
-          <!-- Right column: librarian mascot -->
-          <!--div class="faq__mascot-wrap reveal reveal-delay-2" aria-hidden="true">
-            <img src="images/mascotte_libraire.webp" alt="Mascotte — mascotte Lorem Ipsum libraire avec des livres" class="faq__mascot" />
-          </!--div-->
 
         </div>
 

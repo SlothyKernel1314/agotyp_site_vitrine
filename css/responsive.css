@@ -9,10 +9,11 @@
 }
 
 /* ============================================================
-   HERO STACKING — text above, mascot below.
-   Triggers whenever the side-by-side hero would overlap: any width ≤1024px
-   (all orientations) + tablets in portrait up to 1200px. Independent of the
-   sidebar/nav choice (landscape keeps its sidebar, the hero just restacks).
+   STACKED LAYOUTS (hero + FAQ) — for narrow screens.
+   Stacks the side-by-side hero and FAQ (which would otherwise overlap /
+   get cramped): any width ≤1024px (all orientations) + tablets in portrait
+   up to 1200px. Independent of the sidebar/nav choice (landscape keeps its
+   sidebar; only these sections restack).
 ============================================================ */
 @media (max-width: 1024px), (max-width: 1200px) and (orientation: portrait) {
   .hero-section                 { flex-direction: column; justify-content: center; }
@@ -29,6 +30,11 @@
     margin-top: 1.5rem;
   }
   .hero__mascot-img { width: auto; height: auto; max-width: 75%; max-height: 38vh; }
+
+  /* FAQ — questions then librarian mascot below (centered) */
+  .faq__layout      { grid-template-columns: 1fr; }
+  .faq__mascot-wrap { position: static; justify-content: center; margin-top: 2rem; }
+  .faq__mascot      { width: clamp(160px, 40vw, 280px); }
 }
 
 /* ============================================================
@@ -69,10 +75,6 @@
   /* FAQ */
   .faq__title { font-size: clamp(2rem, 9vw, 4rem); }
   .faq__list  { max-width: 100%; }
-  /* FAQ mascot: stack to a column on tablet */
-  .faq__layout       { grid-template-columns: 1fr; }
-  .faq__mascot-wrap  { position: static; justify-content: center; margin-top: 2rem; }
-  .faq__mascot       { width: clamp(140px, 45vw, 220px); }
 
   /* Documentation */
   .docs__title  { font-size: clamp(2rem, 8vw, 3.5rem); }

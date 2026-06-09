@@ -176,21 +176,15 @@
   align-items: start;
 }
 
-.faq__content {
-  min-width: 0; /* avoids overflow in the grid */
-}
-
-/* Librarian mascot on the right */
+/* Librarian mascot on the right (desktop) */
 .faq__mascot-wrap {
   display: flex;
-  align-items: flex-end;
-  position: sticky;
-  top: 6rem;           /* stays visible on scroll */
-  align-self: start;
+  justify-content: center;
+  align-self: start;   /* top aligned with the first question */
 }
 
 .faq__mascot {
-  width: clamp(180px, 22vw, 320px);
+  width: clamp(280px, 28vw, 440px);
   height: auto;
   display: block;
   mix-blend-mode: multiply;
@@ -218,6 +212,7 @@
 .faq__subtitle em { font-style: normal; font-weight: 600; color: var(--dark); }
 
 .faq__list {
+  min-width: 0;       /* avoids overflow in the grid */
   max-width: 800px;
   display: flex;
   flex-direction: column;
