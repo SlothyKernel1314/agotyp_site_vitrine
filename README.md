@@ -34,6 +34,7 @@ activités, foire aux questions, documentation et informations de contact.
 - Police **Lexend auto-hébergée** (fichiers `.woff2` locaux + `@font-face`) — aucune requête externe (respect du RGPD).
 - CSS modulaire dans `css/`, JavaScript en **modules ES** dans `js/`.
 - Contenu et configuration **séparés du code** (dossier `config/`, voir ci-dessous) et **injectés dynamiquement** côté client.
+- **SEO & partage** : données structurées **JSON-LD** (schema.org NGO), `sitemap.xml`, `robots.txt`, balise `canonical` ; **page 404** personnalisée.
 - **Accessibilité** soignée : navigation clavier, attributs ARIA, lien
   d'évitement, contrastes, `prefers-reduced-motion` et alternatives textuelles.
 
@@ -43,10 +44,13 @@ activités, foire aux questions, documentation et informations de contact.
 agotyp_site_vitrine/
 ├── index.html              # Page principale (one-page)
 ├── legal.html              # Mentions légales
+├── 404.html                # Page d'erreur personnalisée
+├── robots.txt              # Indexation (référence le sitemap)
+├── sitemap.xml             # Plan du site
 ├── favicon.ico
 ├── css/                    # Styles (liés dans l'ordre de la cascade)
 │   ├── fonts.css · base.css · navigation.css · layout.css
-│   └── components.css · sections.css · legal.css · responsive.css
+│   └── components.css · sections.css · legal.css · responsive.css · notfound.css
 ├── js/                     # Scripts (modules ES)
 │   ├── main.js             # Point d'entrée
 │   ├── config-populate.js  # Injection de la config dans le DOM
