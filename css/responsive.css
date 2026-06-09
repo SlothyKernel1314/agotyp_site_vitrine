@@ -59,9 +59,8 @@
   .hero__desc     { font-size: 0.9rem; }
 
   /* About */
-  .about__title      { font-size: clamp(1.8rem, 7vw, 3rem); }
-  .about__text-block { max-width: none; }   /* fill the width when stacked */
-  .about__card       { padding: 1.75rem 1.5rem; }
+  .about__title { font-size: clamp(1.8rem, 7vw, 3rem); }
+  .about__card  { padding: 1.75rem 1.5rem; }
 
   /* Activities */
   .activities__grid  { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
