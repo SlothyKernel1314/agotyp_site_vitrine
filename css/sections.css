@@ -8,8 +8,9 @@
 
 .hero-section {
   position: relative;
-  overflow: hidden;        
-  min-height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;    /* fallback */
+  min-height: 100dvh;
 }
  
 /* Absolute mascot container — extends to the right edge (sidebar included) */

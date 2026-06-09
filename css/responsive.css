@@ -9,9 +9,10 @@
 }
 
 /* ============================================================
-   RESPONSIVE — Portrait tablet (≤ 768px)
+   MOBILE LAYOUT — phones (≤768px) + tablets in PORTRAIT (≤1200px)
+   sidebar → bottom nav, stacked sections. Landscape tablets & desktop keep the sidebar.
 ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1200px) and (orientation: portrait) {
   :root { --sidebar-w: 0px; }
 
   /* Hide the sidebar, show the bottom nav */
