@@ -1,0 +1,5 @@
+# Allow all crawlers to index the whole site
+User-agent: *
+Disallow:
+
+Sitemap: https://agoratypique.com/sitemap.xml
