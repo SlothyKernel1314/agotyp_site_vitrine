@@ -345,6 +345,17 @@
 }
 .contact__detail-value a:hover { text-decoration: underline; }
 
+.contact__map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+}
+.contact__map-link:hover { text-decoration: underline; }
+.contact__map-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
 /* Mascot — spans the right column on desktop (see grid-template-areas) */
 .contact__mascot {
   width: clamp(286px, 30vw, 462px);

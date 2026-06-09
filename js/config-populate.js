@@ -105,6 +105,14 @@
       if (v) el.setAttribute('href', 'tel:' + String(v).replace(/[^\d+]/g, ''));
     });
 
+    // Map link:  <a data-cfg-map> → OpenStreetMap search for the structured address
+    document.querySelectorAll('[data-cfg-map]').forEach(el => {
+      const a = cfg.address;
+      if (!a) return;
+      const q = encodeURIComponent([a.street, a.postalCode, a.city].filter(Boolean).join(' '));
+      el.setAttribute('href', 'https://www.openstreetmap.org/search?query=' + q);
+    });
+
     // "content" attribute (meta):  <meta data-cfg-content="metaDescription">
     document.querySelectorAll('[data-cfg-content]').forEach(el => {
       const v = cfg[el.dataset.cfgContent];
