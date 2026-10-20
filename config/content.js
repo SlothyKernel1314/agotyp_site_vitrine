@@ -154,7 +154,7 @@ window.SITE_CONTENT = {
     },
     {
       q: 'Comment rejoindre le GEM ?',
-      a: "Rien de plus simple : contactez-nous par email ou par téléphone pour planifier une première visite de découverte. Pas d'engagement requis !",
+      a: "Rien de plus simple : contactez-nous par email pour planifier une première visite de découverte. Pas d'engagement requis !",
     },
     {
       q: 'Puis-je venir avec un proche ?',
