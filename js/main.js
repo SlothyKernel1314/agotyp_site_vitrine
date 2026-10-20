@@ -1,7 +1,7 @@
 /* ============================================================
    MAIN — entry point (ES module)
-   Reads window.SITE_CONFIG/SITE_CONTENT (set by the config/content
-   scripts loaded before) and orchestrates rendering.
+   Reads window.SITE_CONTENT (set by config/content.js, loaded
+   before) and orchestrates rendering.
 ============================================================ */
 import { renderActivities, initActivitiesShowMore } from './activities.js';
 import { renderFAQ } from './faq.js';

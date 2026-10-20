@@ -33,7 +33,7 @@ activités, foire aux questions, documentation et informations de contact.
 - **HTML5, CSS3, JavaScript (vanilla)** — aucun framework, **aucune étape de build**, aucune dépendance npm.
 - Police **Lexend auto-hébergée** (fichiers `.woff2` locaux + `@font-face`) — aucune requête externe (respect du RGPD).
 - CSS modulaire dans `css/`, JavaScript en **modules ES** dans `js/`.
-- Contenu et configuration **séparés du code** (dossier `config/`, voir ci-dessous) et **injectés dynamiquement** côté client.
+- Identité, coordonnées et textes **écrits directement dans le HTML** (lisibles par les moteurs de recherche) ; activités, FAQ et documents décrits dans `config/content.js` et **rendus côté client**.
 - **SEO & partage** : données structurées **JSON-LD** (schema.org NGO), `sitemap.xml`, `robots.txt`, balise `canonical` ; **page 404** personnalisée.
 - **Accessibilité** soignée : navigation clavier, attributs ARIA, lien
   d'évitement, contrastes, `prefers-reduced-motion` et alternatives textuelles.
@@ -53,12 +53,10 @@ agotyp_site_vitrine/
 │   └── components.css · sections.css · legal.css · responsive.css · notfound.css
 ├── js/                     # Scripts (modules ES)
 │   ├── main.js             # Point d'entrée
-│   ├── config-populate.js  # Injection de la config dans le DOM
 │   ├── data.js · utils.js · carousel.js
 │   └── activities.js · faq.js · docs.js · ui.js
-├── config/                 # Données & configuration (voir ci-dessous)
-│   ├── config.example.js   # Modèle identité/contact/légal (versionné)
-│   └── content.example.js  # Modèle activités/FAQ/docs/textes (versionné)
+├── config/
+│   └── content.js          # Activités, FAQ, documents (données rendues par js/)
 ├── fonts/                  # Lexend (.woff2) + licence OFL
 ├── images/                 # Logo + mascottes
 ├── docs/                   # PDF de l'association (NON versionné)
@@ -71,20 +69,10 @@ agotyp_site_vitrine/
 > Le site est statique (pas de build), mais il charge des **modules ES** : il doit
 > être **servi via HTTP**. L'ouvrir en `file://` (double-clic) **ne fonctionne pas**.
 
-**1. Configuration & contenu** — les vraies données ne sont pas versionnées ;
-on les crée à partir des modèles :
-
-```bash
-cp config/config.example.js  config/config.js     # identité, contact, mentions légales
-cp config/content.example.js config/content.js    # activités, FAQ, documents, textes
-```
-
-Puis éditer `config/config.js` et `config/content.js` avec les vraies valeurs.
-
-**2. Documents** — déposer les PDF de l'association dans `docs/` (dossier non
+**1. Documents** — déposer les PDF de l'association dans `docs/` (dossier non
 versionné), selon les chemins déclarés dans `config/content.js`.
 
-**3. Servir le site** — par exemple :
+**2. Servir le site** — par exemple :
 
 ```bash
 # Python 3

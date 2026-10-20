@@ -20,9 +20,3 @@ TODO.md
 
 # Association PDF documents (not versioned)
 docs/
-
-# Real site configuration (never versioned; see config/config.example.js)
-config/config.js
-
-# Real site content (never versioned; see config/content.example.js)
-config/content.js

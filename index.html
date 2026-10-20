@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr" data-cfg-title="{name} — {type}">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f5f0e8" />
-  <title>Lorem Ipsum — Groupe d'Entraide Mutuelle</title>
-  <meta name="description" data-cfg-content="metaDescription" content="Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçu par des autistes pour des autistes." />
+  <title>Agoratypique — Groupe d'Entraide Mutuelle</title>
+  <meta name="description" content="Le GEM Agoratypique est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçu par des autistes, pour des autistes." />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="canonical" href="https://agoratypique.com/" />
+
+  <!-- Structured data (schema.org NGO) — helps search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Agoratypique",
+    "legalName": "Agoratypique",
+    "description": "Le GEM Agoratypique est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes. Conçu par des autistes, pour des autistes.",
+    "url": "https://agoratypique.com/",
+    "logo": "https://agoratypique.com/images/logo.svg",
+    "email": "agoratypique94@gmail.com",
+    "telephone": "+33 7 61 30 70 26",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "96 rue du Général Leclerc",
+      "postalCode": "94000",
+      "addressLocality": "Créteil",
+      "addressCountry": "FR"
+    },
+    "areaServed": "Créteil (94)",
+    "identifier": "W941019356"
+  }
+  </script>
 
   <!-- Lexend font — self-hosted (GDPR + perf); OFL license: fonts/OFL.txt -->
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,12 +45,7 @@
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
-  <!-- Site configuration (committed example; real config.js gitignored, overrides) -->
-  <script src="config/config.example.js"></script>
-  <script src="config/config.js"></script>
-
-  <!-- Site content (committed example; real content.js gitignored, overrides) -->
-  <script src="config/content.example.js"></script>
+  <!-- Site content: activities, FAQ, documents (rendered by js/) -->
   <script src="config/content.js"></script>
 </head>
 <body>
@@ -43,7 +62,7 @@
   <nav class="sidebar-nav" aria-label="Navigation principale">
 
     <!-- Logo -->
-    <a class="sidebar-logo" href="#accueil" data-cfg-aria-label="{name} — Retour à l'accueil" aria-label="Lorem Ipsum — Retour à l'accueil">
+    <a class="sidebar-logo" href="#accueil" aria-label="Agoratypique — Retour à l'accueil">
       <img src="images/logo.svg" alt="" width="40" height="40" />
     </a>
 
@@ -100,11 +119,11 @@
  
       <div class="section__inner">
         <div class="hero__left">
-          <p class="hero__eyebrow" data-cfg="type">Groupe d'Entraide Mutuelle</p>
-          <h1 class="hero__title" id="hero-title" data-cfg="name">Lorem Ipsum</h1>
-          <p class="hero__subtitle" data-cfg-tpl="{type} à {location}">Groupe d'Entraide Mutuelle à Créteil (94)</p>
-          <div class="hero__desc" data-txt-list="heroDesc">
-            <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+          <p class="hero__eyebrow">Groupe d'Entraide Mutuelle</p>
+          <h1 class="hero__title" id="hero-title">Agoratypique</h1>
+          <p class="hero__subtitle">Groupe d'Entraide Mutuelle à Créteil (94)</p>
+          <div class="hero__desc">
+            <p>Le GEM Agoratypique est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
             <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités.</p>
           </div>
           <a href="#contact" class="btn-primary">
@@ -125,18 +144,18 @@
 
         <div class="reveal">
           <h2 class="about__title" id="about-title">Le GEM</h2>
-          <p class="about__subtitle"><em data-txt="aboutSubtitle">[Qui sommes nous ?]</em></p>
+          <p class="about__subtitle"><em>[Qui sommes nous ?]</em></p>
         </div>
 
-        <div class="about__text-block reveal reveal-delay-1" data-txt-list="aboutText">
-          <p>Le GEM Lorem Ipsum est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
-          <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités. </p>
+        <div class="about__text-block reveal reveal-delay-1">
+          <p>Le GEM Agoratypique est un lieu d'entraide entre pairs, créé autour du vécu et des besoins des personnes autistes.</p>
+          <p>Il a pour objectif de rompre l'isolement, de favoriser le lien social et de permettre à chacun de trouver sa place, dans un cadre sécurisant, bienveillant et respectueux des singularités.</p>
         </div>
 
         <div class="about__card reveal reveal-delay-3">
-          <p class="about__card-title" data-txt="aboutCardTitle">Nous sommes plus qu'un dispositif.</p>
-          <p class="about__card-text" data-txt="aboutCardText">
-            L'Lorem Ipsum est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin. 
+          <p class="about__card-title">Nous sommes plus qu'un dispositif.</p>
+          <p class="about__card-text">
+            L'Agoratypique est un espace de vie créé par et pour les personnes autistes. Ici, chacun apporte sa singularité, ses forces et son vécu, et reçoit en retour écoute, soutien et appartenance. Nous croyons que la neurodiversité est une richesse, et que l'entraide entre pairs est l'une des formes les plus puissantes de soin.
           </p>
         </div>
 
@@ -151,7 +170,7 @@
 
         <div class="reveal">
           <h2 class="activities__title" id="activities-title">Ce qu'on fait</h2>
-          <p class="activities__subtitle"><em data-txt="activitiesSubtitle">[Nos activités]</em></p>
+          <p class="activities__subtitle"><em>[Nos activités]</em></p>
         </div>
 
         <!-- Cards injected by JS (js/activities.js) -->
@@ -169,7 +188,7 @@
         <!-- Title (full width, above the columns) -->
         <div class="reveal">
           <h2 class="faq__title" id="faq-title">Des questions&nbsp;?</h2>
-          <p class="faq__subtitle"><em data-txt="faqSubtitle">[Foire aux questions]</em></p>
+          <p class="faq__subtitle"><em>[Foire aux questions]</em></p>
         </div>
 
         <div class="faq__layout">
@@ -195,7 +214,7 @@
 
         <div class="reveal">
           <h2 class="docs__title" id="docs-title">Documents</h2>
-          <p class="docs__subtitle"><em data-txt="docsSubtitle">[Documentation]</em></p>
+          <p class="docs__subtitle"><em>[Documentation]</em></p>
         </div>
 
         <!-- Documents injected by JS (js/docs.js) -->
@@ -211,25 +230,25 @@
 
           <!-- Text -->
           <div class="contact__text">
-            <p class="contact__label reveal" data-txt="contactLabel">Nous rejoindre</p>
-            <h2 class="contact__title reveal reveal-delay-1" id="contact-title" data-txt="contactTitle">
+            <p class="contact__label reveal">Nous rejoindre</p>
+            <h2 class="contact__title reveal reveal-delay-1" id="contact-title">
               Venez nous rendre visite&nbsp;!
             </h2>
-            <p class="contact__desc reveal reveal-delay-2" data-txt="contactDesc">
+            <p class="contact__desc reveal reveal-delay-2">
               Que vous soyez curieux, à la recherche de lien social ou que vous ayez simplement envie de découvrir l'espace, nos portes vous sont ouvertes.
             </p>
           </div>
 
           <!-- Buttons -->
           <div class="contact__actions reveal reveal-delay-3">
-            <a href="mailto:contact@example.org" class="btn-teal" data-cfg-mailto="email" data-cfg-aria-label="Envoyer un email à {name}" aria-label="Envoyer un email à Lorem Ipsum">
+            <a href="mailto:agoratypique94@gmail.com" class="btn-teal" aria-label="Envoyer un email à Agoratypique">
               Nous écrire
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
                 <path d="M1 5L8 9.5L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </a>
-            <a href="tel:+33123456789" title="Appeler l'animatrice" class="btn-outline" data-cfg-tel="phone" data-cfg-aria-label="Appeler {name}" aria-label="Appeler Lorem Ipsum">
+            <a href="tel:+33761307026" title="Appeler l'animatrice" class="btn-outline" aria-label="Appeler Agoratypique">
               Nous appeler
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 2h3l1.5 4L6 7.5c1 2 2.5 3.5 4.5 4.5L12 10.5l4 1.5V15a1 1 0 01-1 1C5.4 16 0 10.6 0 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -244,17 +263,17 @@
           <div class="contact__details reveal reveal-delay-4">
             <div class="contact__detail">
               <p class="contact__detail-label">Adresse</p>
-              <p class="contact__detail-value" data-cfg="addressLine">12 rue de l'Exemple, 90000 Ville</p>
-              <a class="contact__map-link" data-cfg-map href="#" target="_blank" rel="noopener noreferrer"
+              <p class="contact__detail-value">96 rue du Général Leclerc - 94000 CRÉTEIL</p>
+              <a class="contact__map-link" href="https://www.google.com/maps/search/?api=1&amp;query=96%20rue%20du%20G%C3%A9n%C3%A9ral%20Leclerc%2094000%20CR%C3%89TEIL" target="_blank" rel="noopener noreferrer"
                  aria-label="Voir l'adresse sur la carte (Google Maps, nouvel onglet)">Voir sur la carte ↗</a>
             </div>
             <div class="contact__detail">
               <p class="contact__detail-label">Téléphone</p>
-              <p class="contact__detail-value" data-cfg="phone">+33 1 23 45 67 89</p>
+              <p class="contact__detail-value">+33 7 61 30 70 26</p>
             </div>
             <div class="contact__detail">
               <p class="contact__detail-label">Email</p>
-              <p class="contact__detail-value" data-cfg="email">contact@example.org</p>
+              <p class="contact__detail-value">agoratypique94@gmail.com</p>
             </div>
           </div>
 
@@ -269,7 +288,7 @@
   ================================================ -->
   <footer>
     <div class="footer__inner">
-      <p class="footer__copy" data-cfg-tpl="© {year} {name} — {type}. Fait par {footerCredit}.">© 2026 Lorem Ipsum — Groupe d'Entraide Mutuelle. Fait par Pxelgon.</p>
+      <p class="footer__copy">© 2026 Agoratypique — Groupe d'Entraide Mutuelle. Fait par Pxelgon.</p>
       <nav class="footer__links" aria-label="Liens de bas de page">
         <a href="#accueil">Accueil</a>
         <a href="#a-propos">À propos</a>
@@ -365,7 +384,6 @@
   </nav>
   
   <!-- JavaScript -->
-  <script src="js/config-populate.js"></script>
   <script type="module" src="js/main.js"></script>
 
 </body>
