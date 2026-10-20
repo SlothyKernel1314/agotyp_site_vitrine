@@ -13,9 +13,9 @@ window.SITE_CONTENT = {
       name: 'Permanences et activités libres',
       desc: "Des temps où le GEM est simplement ouvert : chacun vient quand il le souhaite et pratique les activités de son choix, librement, sans cadre ni programme préparé à l'avance.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -23,9 +23,9 @@ window.SITE_CONTENT = {
       name: 'Notre serveur Discord',
       desc: "Le cœur en ligne du GEM, ouvert 24h/24 : on y discute à toute heure, on improvise des streams, on regarde des films ensemble… Un lien permanent entre les membres, au-delà des activités.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -33,9 +33,9 @@ window.SITE_CONTENT = {
       name: 'Soirée jeux vidéo',
       desc: "Des soirées en ligne, depuis chez soi via Discord, pour jouer ensemble à un peu de tout : des party games (Jackbox, Board Game Arena…) et parfois de plus gros jeux. Un moment de détente et de partage.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -43,9 +43,9 @@ window.SITE_CONTENT = {
       name: 'Après-midi nanars',
       desc: "Des après-midis au local pour regarder ensemble des « nanars » — ces films tellement ratés qu'ils en deviennent cultes. Un moment décontracté, à rire en bonne compagnie.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -53,9 +53,9 @@ window.SITE_CONTENT = {
       name: 'Sorties & Loisirs',
       desc: 'Musées, parcs, cinémas : des sorties adaptées et préparées ensemble pour découvrir la ville dans un cadre sécurisant et en bonne compagnie.',
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -63,9 +63,9 @@ window.SITE_CONTENT = {
       name: 'Jeux de société',
       desc: 'Des après-midis dans un café-jeux pour découvrir et jouer à toutes sortes de jeux de société, ensemble et dans une ambiance détendue.',
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -73,8 +73,8 @@ window.SITE_CONTENT = {
       name: 'Jeu de rôle',
       desc: "Autour d'une table, les membres vivent ensemble des aventures imaginaires guidées par un maître du jeu. Un loisir collaboratif où chacun avance à son rythme.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -82,9 +82,9 @@ window.SITE_CONTENT = {
       name: 'Soirées retransmissions',
       desc: "Des soirées au local pour suivre ensemble, en direct, de grands événements : sport (football, F1), catch (WWE), cérémonies… Un moment convivial où l'on commente et où l'on vibre à plusieurs.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -92,9 +92,9 @@ window.SITE_CONTENT = {
       name: 'Practice au golf',
       desc: "Une sortie au practice pour taper des balles en plein air, sans parcours ni compétition — juste pour se défouler. Aucune expérience nécessaire, c'est ouvert aux grands débutants.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -102,9 +102,9 @@ window.SITE_CONTENT = {
       name: 'Médiation animale',
       desc: "Un intervenant vient au local accompagné d'un ou plusieurs animaux. Un temps d'apaisement et de contact, où la présence de l'animal fait du bien et crée du lien entre les membres.",
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80', alt: 'Plateau de jeu de rôle avec figurines' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
     {
@@ -112,8 +112,8 @@ window.SITE_CONTENT = {
       name: 'Ateliers cuisine',
       desc: 'Des ateliers conviviaux pour cuisiner ensemble, partager des recettes et créer du lien dans un cadre bienveillant.',
       images: [
-        { src: 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80', alt: 'Dés de jeu de rôle sur une table' },
-        { src: 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80', alt: "Joueurs autour d'une table de JDR" },
+        { src: 'images/a_venir.webp', alt: '' },
+        { src: 'images/a_venir.webp', alt: '' },
       ],
     },
   ],
