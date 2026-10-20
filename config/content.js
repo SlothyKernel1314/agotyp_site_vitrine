@@ -162,7 +162,7 @@ window.SITE_CONTENT = {
     },
     {
       q: 'Y a-t-il des professionnels au GEM ?',
-      a: "Pas de professionnels de santé : c'est précisément ce qui distingue le GEM d'autres structures. Il est géré par et pour les personnes autistes, dans un esprit d'entraide entre pairs, sans relation soignant-soigné. Une animatrice est toutefois présente pour accompagner la vie du groupe.",
+      a: "Pas de professionnels de santé : c'est précisément ce qui distingue le GEM d'autres structures. Il est géré par et pour les personnes autistes, dans un esprit d'entraide entre pairs, sans relation soignant-soigné. Ce sont les membres eux-mêmes qui font vivre le groupe, avec, selon les périodes, l'appui d'un animateur ou d'une animatrice.",
     },
   ],
 
